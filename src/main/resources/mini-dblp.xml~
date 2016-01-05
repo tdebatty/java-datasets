@@ -1,0 +1,1002 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE dblp SYSTEM "dblp.dtd">
+<dblp>
+<www mdate="2002-01-03" key="www/fr/ardentsoftware">
+<title>Ardent Software</title>
+<url>http://www.ardentsoftware.fr</url>
+</www>
+
+<www mdate="2002-01-03" key="www/gov/nasa/beowulf">
+<title>Beowulf Project at CESDIS</title>
+<url>http://beowulf.gsfc.nasa.gov/beowulf.html</url>
+</www>
+
+<www mdate="2012-11-16" key="www/de/kts">
+<editor>Klaus Tschira</editor>
+<title>Klaus Tschira Stiftung gemeinn&uuml;tzige GmbH, KTS</title>
+<ee>http://www.klaus-tschira-stiftung.de/</ee>
+<url>http://www.klaus-tschira-stiftung.de/</url>
+<year>2012</year>
+</www>
+
+<www mdate="2002-01-03" key="www/it/stet-mpeg">
+<title>The MPEG Home Page</title>
+<url>http://drogo.cselt.stet.it/mpeg/</url>
+</www>
+
+
+<www mdate="2002-01-03" key="www/org/tpc">
+<title>Transaction Processing Performance Council</title>
+<url>http://www.tpc.org</url>
+</www>
+
+<www mdate="2002-01-03" key="www/org/kaffe">
+<title>KAFFE</title>
+<url>http://www.kaffe.org/</url>
+</www>
+
+<www mdate="2009-02-11" key="www/org/oasis-open-cover-xml">
+<author>Robin Cover</author>
+<title>The SGML/XML Web Page</title>
+<url>http://xml.coverpages.org/sgml-xml.html</url>
+<year>2006</year>
+</www>
+
+<www mdate="2002-01-03" key="www/org/aiim-wfmc">
+<title>WfMC Standards: The Workflow Reference Model, Version 1.1.</title>
+<year>1995</year>
+<url>http://www.aiim.org/wfmc/mainframe.htm</url>
+</www>
+
+<www mdate="2002-01-03" key="www/org/mitre/future">
+<author>Arnon Rosenthal</author>
+<title>The Future of Classic Data Administration: Objects + Databases + CASE</title>
+<booktitle>SWEE</booktitle>
+<year>1998</year>
+<url>http://www.mitre.org/support/swee/rosenthal.html</url>
+</www>
+
+<www mdate="2002-01-03" key="www/org/w3/TR/query-datamodel">
+<editor>Mary F. Fernandez</editor>
+<editor>Jonathan Robie</editor>
+<title>XML Query Data Model</title>
+<year>2001</year>
+<url>http://www.w3.org/TR/query-datamodel</url>
+</www>
+
+<www mdate="2004-12-02" key="www/org/w3/TR/query-algebra">
+<editor>Peter Fankhauser</editor>
+<editor>Mary F. Fern&aacute;ndez</editor>
+<editor>Ashok Malhotra</editor>
+<editor>Michael Rys</editor>
+<editor>J&eacute;r&ocirc;me Sim&eacute;on</editor>
+<editor>Philip Wadler</editor>
+<title>The XML Query Algebra</title>
+<year>2001</year>
+<url>http://www.w3.org/TR/2000/WD-query-algebra-20001204/</url>
+</www>
+
+<www mdate="2002-01-03" key="www/org/w3/TR/xmlquery-req">
+<editor>Donald D. Chamberlin</editor>
+<editor>Peter Fankhauser</editor>
+<editor>Massimo Marchiori</editor>
+<editor>Jonathan Robie</editor>
+<title>XML Query Requirements</title>
+<year>2001</year>
+<url>http://www.w3.org/TR/xmlquery-req</url>
+</www>
+
+<www mdate="2011-08-22" key="www/org/w3/TR/NOTE-xml-ql">
+<author>Alin Deutsch</author>
+<author>Mary F. Fernandez</author>
+<author>Daniela Florescu</author>
+<author>Alon Y. Levy</author>
+<author>Dan Suciu</author>
+<title>XML-QL: A Query Language for XML</title>
+<url>http://www.w3.org/TR/NOTE-xml-ql/</url>
+<year>1998</year>
+</www>
+
+<www mdate="2002-01-03" key="www/org/w3/TR/xquery">
+<editor>Donald D. Chamberlin</editor>
+<editor>Daniela Florescu</editor>
+<editor>Jonathan Robie</editor>
+<editor>J&eacute;r&ocirc;me Sim&eacute;on</editor>
+<editor>Mugur Stefanescu</editor>
+<title>XQuery: A Query Language for XML</title>
+<year>2001</year>
+<url>http://www.w3.org/TR/xquery</url>
+</www>
+
+<www mdate="2002-01-03" key="www/org/w3/TR/REC-xml">
+<title>W3C: Extensible Markup Language (XML) 1.0</title>
+<url>http://www.w3.org/TR/REC-xml</url>
+</www>
+
+<www mdate="2002-01-03" key="www/org/w3/TR/xmlquery-use-cases">
+<editor>Donald D. Chamberlin</editor>
+<editor>Peter Fankhauser</editor>
+<editor>Massimo Marchiori</editor>
+<editor>Jonathan Robie</editor>
+<title>XML Query Use Cases</title>
+<year>2001</year>
+<url>http://www.w3.org/TR/xmlquery-use-cases</url>
+</www>
+
+<www mdate="2002-01-03" key="www/org/w3/dom">
+<title>W3C: Document Oject Model (DOM)</title>
+<url>http://www.w3.org/DOM/</url>
+</www>
+
+<www mdate="2011-09-05" key="www/org/w3/http1-1">
+<author>Roy T. Fielding</author>
+<author>Henrik Frystyk Nielsen</author>
+<author>Tim Berners-Lee</author>
+<title>Internet Draft: Hypertext Transfer Protocol - HTTP/1.1</title>
+<url>http://www.w3.org/Protocols/HTTP/1.1/spec.html</url>
+<year>1999</year>
+</www>
+
+<www mdate="2002-01-03" key="www/org/w3/style-xsl">
+<title>W3C: Extensible Stylesheet Language (XSL)</title>
+<url>http://www.w3.org/Style/XSL/</url>
+</www>
+
+<www mdate="2002-01-03" key="www/org/w3/ql98">
+<title>W3C: The w3c Query Language Workshop, December 1998, Boston, MA, USA</title>
+<year>1998</year>
+<url>http://www.w3.org/TandS/QL/QL98/</url>
+</www>
+
+<www mdate="2002-01-03" key="www/org/w3/rfc1738">
+<author>Tim Berners-Lee</author>
+<title>Request for Comments: 1738, Uniform Resource Locators (URL)</title>
+<year>1994</year>
+<url>http://www.w3.org/Addressing/rfc1738.txt</url>
+</www>
+
+<www mdate="2002-01-03" key="www/org/w3/w3c">
+<title>W3C - The World Wide Web Consortium</title>
+<url>http://www.w3.org/</url>
+</www>
+
+<www mdate="2002-01-03" key="www/org/omg/uml-notation-guide">
+<title>OMG, UML Notation Guide, Version 1.1</title>
+<year>1997</year>
+<url>http://www.omg.org/techprocess/meetings/schedule/Technology_Adoptions.htm</url>
+</www>
+
+<www mdate="2002-01-03" key="www/com/ontos">
+<title>Ontos</title>
+<url>http://www.ontos.com/</url>
+</www>
+
+<www mdate="2002-01-03" key="www/com/google">
+<title>Google</title>
+<url>http://www.google.com</url>
+</www>
+
+<www mdate="2002-01-03" key="www/com/sun-java">
+<title>Java Language Home Page</title>
+<url>http://java.sun.com/</url>
+</www>
+
+<www mdate="2002-01-03" key="www/com/poet">
+<title>Poet</title>
+<url>http://www.poet.com</url>
+</www>
+
+<www mdate="2002-01-03" key="www/com/metacrawler">
+<title>MetaCrawler</title>
+<url>http://www.metacrawler.com</url>
+</www>
+
+<www mdate="2002-01-03" key="www/com/versant">
+<title>Versant ODBMS</title>
+<url>http://www.versant.com</url>
+</www>
+
+<www mdate="2002-01-03" key="www/com/yahoo">
+<title>Yahoo</title>
+<url>http://www.yahoo.com/</url>
+</www>
+
+<www mdate="2002-01-03" key="www/com/persistence">
+<title>Persistence Software</title>
+<url>http://www.persistence.com/</url>
+</www>
+
+<www mdate="2002-01-03" key="www/com/lycos">
+<title>Lycos</title>
+<url>http://www.lycos.com</url>
+</www>
+
+<www mdate="2002-01-03" key="www/com/ibm/db2">
+<title>IBM DB2</title>
+<url>http://www.software.ibm.com/data/db2/</url>
+</www>
+
+<www mdate="2002-01-03" key="www/com/odi">
+<title>Objectstore</title>
+<url>http://www.odi.com</url>
+</www>
+
+<www mdate="2002-01-03" key="www/com/altavista">
+<title>AltaVista</title>
+<url>http://www.altavista.com/</url>
+</www>
+
+<www mdate="2002-01-03" key="www/com/objectivity-wp-choosing">
+<title>Objectivity White Paper: Choosing an Object Database</title>
+<year>1998</year>
+<url>http://www.objectivity.com/ObjectDatabase/WP/Choosing/Choosing.html</url>
+</www>
+<www mdate="2002-01-03" key="www/fi/hut-som">
+<title>Self-organizing Map</title>
+<url>http://www.cis.hut.fi/nnrc/nnrc-programs.html</url>
+</www>
+
+<incollection mdate="2013-09-10" key="series/cogtech/Zancanaro12">
+<author>Massimo Zancanaro</author>
+<title>Shared Interfaces for Co-located Interaction.</title>
+<pages>71-88</pages>
+<year>2012</year>
+<booktitle>Ubiquitous Display Environments</booktitle>
+<ee>http://dx.doi.org/10.1007/978-3-642-27663-7_5</ee>
+<crossref>series/cogtech/364227662</crossref>
+<url>db/series/cogtech/364227662.html#Zancanaro12</url>
+</incollection>
+<incollection mdate="2013-09-10" key="series/cogtech/Wahlster13">
+<author>Wolfgang Wahlster</author>
+<title>The Semantic Product Memory: An Interactive Black Box for Smart Objects.</title>
+<pages>3-21</pages>
+<year>2013</year>
+<booktitle>SemProM</booktitle>
+<ee>http://dx.doi.org/10.1007/978-3-642-37377-0_1</ee>
+<crossref>series/cogtech/364237376</crossref>
+<url>db/series/cogtech/364237376.html#Wahlster13</url>
+</incollection>
+<incollection mdate="2013-09-10" key="series/cogtech/BertonKHS06">
+<author>Andr&eacute; Berton</author>
+<author>Alfred Kaltenmeier</author>
+<author>Udo Haiber</author>
+<author>Olaf Schreiner</author>
+<title>Speech Recognition.</title>
+<pages>85-107</pages>
+<year>2006</year>
+<booktitle>SmartKom</booktitle>
+<ee>http://dx.doi.org/10.1007/3-540-36678-4_6</ee>
+<crossref>series/cogtech/54023732</crossref>
+<url>db/series/cogtech/54023732.html#BertonKHS06</url>
+</incollection>
+<incollection mdate="2013-09-10" key="series/cogtech/Wahlster06">
+<author>Wolfgang Wahlster</author>
+<title>Dialogue Systems Go Multimodal: The SmartKom Experience.</title>
+<pages>3-27</pages>
+<year>2006</year>
+<booktitle>SmartKom</booktitle>
+<ee>http://dx.doi.org/10.1007/3-540-36678-4_1</ee>
+<crossref>series/cogtech/54023732</crossref>
+<url>db/series/cogtech/54023732.html#Wahlster06</url>
+</incollection>
+<incollection mdate="2013-09-10" key="series/cogtech/CunninghamCD08">
+<author>P&aacute;draig Cunningham</author>
+<author>Matthieu Cord</author>
+<author>Sarah Jane Delany</author>
+<title>Supervised Learning.</title>
+<pages>21-49</pages>
+<year>2008</year>
+<booktitle>Machine Learning Techniques for Multimedia</booktitle>
+<ee>http://dx.doi.org/10.1007/978-3-540-75171-7_2</ee>
+<crossref>series/cogtech/354075170</crossref>
+<url>db/series/cogtech/354075170.html#CunninghamCD08</url>
+</incollection>
+<incollection mdate="2013-09-10" key="series/cogtech/HorndaschRR06">
+<author>Axel Horndasch</author>
+<author>Horst Rapp</author>
+<author>Hans R&ouml;ttger</author>
+<title>SmartKom-Public.</title>
+<pages>471-492</pages>
+<year>2006</year>
+<booktitle>SmartKom</booktitle>
+<ee>http://dx.doi.org/10.1007/3-540-36678-4_30</ee>
+<crossref>series/cogtech/54023732</crossref>
+<url>db/series/cogtech/54023732.html#HorndaschRR06</url>
+</incollection>
+<incollection mdate="2013-09-10" key="series/cogtech/ZimmerMU11">
+<author>Hubert D. Zimmer</author>
+<author>Stefan M&uuml;nzer</author>
+<author>Katja Umla-Runge</author>
+<title>Visuo-spatial Working Memory as a Limited Resource of Cognitive Processing.</title>
+<pages>13-34</pages>
+<year>2011</year>
+<booktitle>Resource-Adaptive Cognitive Processes</booktitle>
+<ee>http://dx.doi.org/10.1007/978-3-540-89408-7_2</ee>
+<crossref>series/cogtech/354089408</crossref>
+<url>db/series/cogtech/354089408.html#ZimmerMU11</url>
+</incollection>
+<incollection mdate="2013-09-10" key="series/cogtech/MayberryC11">
+<author>Marshall R. Mayberry</author>
+<author>Matthew W. Crocker</author>
+<title>The Evolution of a Connectionist Model of Situated Human Language Understanding.</title>
+<pages>143-167</pages>
+<year>2011</year>
+<booktitle>Resource-Adaptive Cognitive Processes</booktitle>
+<ee>http://dx.doi.org/10.1007/978-3-540-89408-7_8</ee>
+<crossref>series/cogtech/354089408</crossref>
+<url>db/series/cogtech/354089408.html#MayberryC11</url>
+</incollection>
+<incollection mdate="2013-09-10" key="series/cogtech/ZimmerMB11">
+<author>Hubert D. Zimmer</author>
+<author>Stefan M&uuml;nzer</author>
+<author>J&ouml;rg Baus</author>
+<title>From Resource-Adaptive Navigation Assistance to Augmented Cognition.</title>
+<pages>35-53</pages>
+<year>2011</year>
+<booktitle>Resource-Adaptive Cognitive Processes</booktitle>
+<ee>http://dx.doi.org/10.1007/978-3-540-89408-7_3</ee>
+<crossref>series/cogtech/354089408</crossref>
+<url>db/series/cogtech/354089408.html#ZimmerMB11</url>
+</incollection>
+<incollection mdate="2013-09-10" key="series/cogtech/Golumbic12">
+<author>Martin Charles Golumbic</author>
+<title>Perspectives on Reasoning About Time.</title>
+<pages>53-70</pages>
+<year>2012</year>
+<booktitle>Ubiquitous Display Environments</booktitle>
+<ee>http://dx.doi.org/10.1007/978-3-642-27663-7_4</ee>
+<crossref>series/cogtech/364227662</crossref>
+<url>db/series/cogtech/364227662.html#Golumbic12</url>
+</incollection>
+<incollection mdate="2013-09-10" key="series/cogtech/Hoyes07">
+<author>Keith Hoyes</author>
+<title>3D Simulation: the Key to A.I.</title>
+<pages>353-387</pages>
+<year>2007</year>
+<booktitle>Artificial General Intelligence</booktitle>
+<ee>http://dx.doi.org/10.1007/978-3-540-68677-4_11</ee>
+<crossref>series/cogtech/354023733</crossref>
+<url>db/series/cogtech/354023733.html#Hoyes07</url>
+</incollection>
+<incollection mdate="2013-09-10" key="series/cogtech/NeidigP13">
+<author>J&ouml;rg Neidig</author>
+<author>J&ouml;rg Prei&szlig;inger</author>
+<title>A SemProM Use Case: Maintenance of Factory and Automotive Components.</title>
+<pages>363-380</pages>
+<year>2013</year>
+<booktitle>SemProM</booktitle>
+<ee>http://dx.doi.org/10.1007/978-3-642-37377-0_22</ee>
+<crossref>series/cogtech/364237376</crossref>
+<url>db/series/cogtech/364237376.html#NeidigP13</url>
+</incollection>
+<incollection mdate="2013-09-10" key="series/cogtech/BrandhermSNL13">
+<author>Boris Brandherm</author>
+<author>Michael Schmitz</author>
+<author>Robert Ne&szlig;elrath</author>
+<author>Frank Lehmann</author>
+<title>A SemProM Use Case: Health Care and Compliance.</title>
+<pages>349-361</pages>
+<year>2013</year>
+<booktitle>SemProM</booktitle>
+<ee>http://dx.doi.org/10.1007/978-3-642-37377-0_21</ee>
+<crossref>series/cogtech/364237376</crossref>
+<url>db/series/cogtech/364237376.html#BrandhermSNL13</url>
+</incollection>
+<incollection mdate="2013-09-10" key="series/cogtech/AlexanderssonP06">
+<author>Jan Alexandersson</author>
+<author>Norbert Pfleger</author>
+<title>Discourse Modeling.</title>
+<pages>237-253</pages>
+<year>2006</year>
+<booktitle>SmartKom</booktitle>
+<ee>http://dx.doi.org/10.1007/3-540-36678-4_16</ee>
+<crossref>series/cogtech/54023732</crossref>
+<url>db/series/cogtech/54023732.html#AlexanderssonP06</url>
+</incollection>
+<incollection mdate="2013-09-10" key="series/cogtech/Gebhard13">
+<author>Patrick Gebhard</author>
+<title>Controlling Interaction with Digital Product Memories.</title>
+<pages>243-259</pages>
+<year>2013</year>
+<booktitle>SemProM</booktitle>
+<ee>http://dx.doi.org/10.1007/978-3-642-37377-0_15</ee>
+<crossref>series/cogtech/364237376</crossref>
+<url>db/series/cogtech/364237376.html#Gebhard13</url>
+</incollection>
+<incollection mdate="2013-09-10" key="series/cogtech/Wittig11">
+<author>Frank Wittig</author>
+<title>Comparison of Machine Learning Techniques for Bayesian Networks for User-Adaptive Systems.</title>
+<pages>315-336</pages>
+<year>2011</year>
+<booktitle>Resource-Adaptive Cognitive Processes</booktitle>
+<ee>http://dx.doi.org/10.1007/978-3-540-89408-7_14</ee>
+<crossref>series/cogtech/354089408</crossref>
+<url>db/series/cogtech/354089408.html#Wittig11</url>
+</incollection>
+<incollection mdate="2013-09-10" key="series/cogtech/Wang07">
+<author>Pei Wang</author>
+<title>The Logic of Intelligence.</title>
+<pages>31-62</pages>
+<year>2007</year>
+<booktitle>Artificial General Intelligence</booktitle>
+<ee>http://dx.doi.org/10.1007/978-3-540-68677-4_2</ee>
+<crossref>series/cogtech/354023733</crossref>
+<url>db/series/cogtech/354023733.html#Wang07</url>
+</incollection>
+<incollection mdate="2013-09-10" key="series/cogtech/Schmidhuber07">
+<author>J&uuml;rgen Schmidhuber</author>
+<title>The New AI: General &amp; Sound &amp; Relevant for Physics.</title>
+<pages>175-198</pages>
+<year>2007</year>
+<booktitle>Artificial General Intelligence</booktitle>
+<ee>http://dx.doi.org/10.1007/978-3-540-68677-4_6</ee>
+<crossref>series/cogtech/354023733</crossref>
+<url>db/series/cogtech/354023733.html#Schmidhuber07</url>
+</incollection>
+<incollection mdate="2013-09-10" key="series/cogtech/BertonBM06">
+<author>Andr&eacute; Berton</author>
+<author>Dirk B&uuml;hler</author>
+<author>Wolfgang Minker</author>
+<title>SmartKom-Mobile Car: User Interaction with Mobile Services in a Car Environment.</title>
+<pages>523-537</pages>
+<year>2006</year>
+<booktitle>SmartKom</booktitle>
+<ee>http://dx.doi.org/10.1007/3-540-36678-4_33</ee>
+<crossref>series/cogtech/54023732</crossref>
+<url>db/series/cogtech/54023732.html#BertonBM06</url>
+</incollection>
+<incollection mdate="2013-09-10" key="series/cogtech/GrasheyS06">
+<author>Stephan Grashey</author>
+<author>Matthias Schuster</author>
+<title>Multiple Biometrics.</title>
+<pages>181-193</pages>
+<year>2006</year>
+<booktitle>SmartKom</booktitle>
+<ee>http://dx.doi.org/10.1007/3-540-36678-4_12</ee>
+<crossref>series/cogtech/54023732</crossref>
+<url>db/series/cogtech/54023732.html#GrasheyS06</url>
+</incollection>
+<book mdate="2012-11-07" key="series/cogtech/FurnkranzGL12">
+<author>Johannes F&uuml;rnkranz</author>
+<author>Dragan Gamberger</author>
+<author>Nada Lavrac</author>
+<title>Foundations of Rule Learning</title>
+<year>2012</year>
+<pages>1-298</pages>
+<publisher>Springer</publisher>
+<series href="db/series/cogtech/index.html">Cognitive Technologies</series>
+<isbn>978-3-540-75196-0</isbn>
+<ee>http://dx.doi.org/10.1007/978-3-540-75197-7</ee>
+<url>http://dx.doi.org/10.1007/978-3-540-75197-7</url>
+</book>
+<incollection mdate="2013-09-10" key="series/cogtech/RistABGKKR004">
+<author>Thomas Rist</author>
+<author>Elisabeth Andr&eacute;</author>
+<author>Stephan Baldes</author>
+<author>Patrick Gebhard</author>
+<author>Martin Klesen</author>
+<author>Michael Kipp</author>
+<author>Peter Rist</author>
+<author>Markus Schmitt 0002</author>
+<title>A Review of the Development of Embodied Presentation Agents and Their Application Fields.</title>
+<pages>377-404</pages>
+<year>2004</year>
+<booktitle>Life-like characters</booktitle>
+<crossref>series/cogtech/354000867</crossref>
+<url>db/series/cogtech/354000867.html#RistABGKKR004</url>
+</incollection>
+<book mdate="2013-09-10" key="series/cogtech/364227662">
+<editor>Antonio Kr&uuml;ger</editor>
+<editor>Tsvi Kuflik</editor>
+<title>Ubiquitous Display Environments</title>
+<year>2012</year>
+<publisher>Springer</publisher>
+<series href="db/series/cogtech/index.html">Cognitive Technologies</series>
+<ee>http://dx.doi.org/10.1007/978-3-642-27663-7</ee>
+<isbn>978-3-642-27662-0</isbn>
+<booktitle>Ubiquitous Display Environments</booktitle>
+<url>db/series/cogtech/364227662.html</url>
+</book>
+
+<incollection mdate="2013-09-10" key="series/cogtech/SuoSI11">
+<author>Yue Suo</author>
+<author>Yuanchun Shi</author>
+<author>Toru Ishida</author>
+<title>Integrating Smart Classroom and Language Services.</title>
+<pages>263-277</pages>
+<year>2011</year>
+<booktitle>The Language Grid</booktitle>
+<ee>http://dx.doi.org/10.1007/978-3-642-21178-2_17</ee>
+<crossref>series/cogtech/364221177</crossref>
+<url>db/series/cogtech/364221177.html#SuoSI11</url>
+</incollection>
+<incollection mdate="2013-09-10" key="series/cogtech/MoritaI11">
+<author>Daisuke Morita</author>
+<author>Toru Ishida</author>
+<title>Collaborative Translation Protocols.</title>
+<pages>215-230</pages>
+<year>2011</year>
+<booktitle>The Language Grid</booktitle>
+<ee>http://dx.doi.org/10.1007/978-3-642-21178-2_14</ee>
+<crossref>series/cogtech/364221177</crossref>
+<url>db/series/cogtech/364221177.html#MoritaI11</url>
+</incollection>
+<incollection mdate="2013-09-10" key="series/cogtech/Engel06">
+<author>Ralf Engel</author>
+<title>Natural Language Understanding.</title>
+<pages>195-207</pages>
+<year>2006</year>
+<booktitle>SmartKom</booktitle>
+<ee>http://dx.doi.org/10.1007/3-540-36678-4_13</ee>
+<crossref>series/cogtech/54023732</crossref>
+<url>db/series/cogtech/54023732.html#Engel06</url>
+</incollection>
+<incollection mdate="2013-09-10" key="series/cogtech/ValentiSGC08">
+<author>Roberto Valenti</author>
+<author>Nicu Sebe</author>
+<author>Theo Gevers</author>
+<author>Ira Cohen</author>
+<title>Machine Learning Techniques for Face Analysis.</title>
+<pages>159-187</pages>
+<year>2008</year>
+<booktitle>Machine Learning Techniques for Multimedia</booktitle>
+<ee>http://dx.doi.org/10.1007/978-3-540-75171-7_7</ee>
+<crossref>series/cogtech/354075170</crossref>
+<url>db/series/cogtech/354075170.html#ValentiSGC08</url>
+</incollection>
+<incollection mdate="2013-09-10" key="series/cogtech/Hayes-Roth04">
+<author>Barbara Hayes-Roth</author>
+<title>What Makes Characters Seem Life-Like?</title>
+<pages>447-462</pages>
+<year>2004</year>
+<booktitle>Life-like characters</booktitle>
+<crossref>series/cogtech/354000867</crossref>
+<url>db/series/cogtech/354000867.html#Hayes-Roth04</url>
+</incollection>
+<incollection mdate="2013-09-10" key="series/cogtech/TractinskyE12">
+<author>Noam Tractinsky</author>
+<author>Eleanor Eytam</author>
+<title>Considering the Aesthetics of Ubiquitous Displays.</title>
+<pages>89-104</pages>
+<year>2012</year>
+<booktitle>Ubiquitous Display Environments</booktitle>
+<ee>http://dx.doi.org/10.1007/978-3-642-27663-7_6</ee>
+<crossref>series/cogtech/364227662</crossref>
+<url>db/series/cogtech/364227662.html#TractinskyE12</url>
+</incollection>
+<book mdate="2014-08-07" key="series/cogtech/Nugues14">
+<author>Pierre M. Nugues</author>
+<title>Language Processing with Perl and Prolog - Theories, Implementation, and Application</title>
+<year>2014</year>
+<pages>1-574</pages>
+<publisher>Springer</publisher>
+<series href="db/series/cogtech/index.html">Cognitive Technologies</series>
+<isbn>978-3-642-41463-3</isbn>
+<isbn>978-3-642-41464-0</isbn>
+<ee>http://dx.doi.org/10.1007/978-3-642-41464-0</ee>
+</book>
+<incollection mdate="2013-09-10" key="series/cogtech/Schiel06">
+<author>Florian Schiel</author>
+<title>Evaluation of Multimodal Dialogue Systems.</title>
+<pages>617-643</pages>
+<year>2006</year>
+<booktitle>SmartKom</booktitle>
+<ee>http://dx.doi.org/10.1007/3-540-36678-4_38</ee>
+<crossref>series/cogtech/54023732</crossref>
+<url>db/series/cogtech/54023732.html#Schiel06</url>
+</incollection>
+<book mdate="2013-09-10" key="series/cogtech/364237376">
+<editor>Wolfgang Wahlster</editor>
+<title>SemProM - Foundations of Semantic Product Memories for the Internet of Things</title>
+<year>2013</year>
+<publisher>Springer</publisher>
+<series href="db/series/cogtech/index.html">Cognitive Technologies</series>
+<ee>http://dx.doi.org/10.1007/978-3-642-37377-0</ee>
+<isbn>978-3-642-37376-3</isbn>
+<booktitle>SemProM</booktitle>
+<url>db/series/cogtech/364237376.html</url>
+</book>
+
+<incollection mdate="2013-09-10" key="series/cogtech/Blocher06">
+<author>Anselm Blocher</author>
+<title>Facts and Figures About the SmartKom Project.</title>
+<pages>29-39</pages>
+<year>2006</year>
+<booktitle>SmartKom</booktitle>
+<ee>http://dx.doi.org/10.1007/3-540-36678-4_2</ee>
+<crossref>series/cogtech/54023732</crossref>
+<url>db/series/cogtech/54023732.html#Blocher06</url>
+</incollection>
+<incollection mdate="2013-09-10" key="series/cogtech/MullerC12">
+<author>J&ouml;rg M&uuml;ller</author>
+<author>Keith Cheverst</author>
+<title>Audience Measurement for Digital Signage: Exploring the Audience's Perspective.</title>
+<pages>143-160</pages>
+<year>2012</year>
+<booktitle>Ubiquitous Display Environments</booktitle>
+<ee>http://dx.doi.org/10.1007/978-3-642-27663-7_9</ee>
+<crossref>series/cogtech/364227662</crossref>
+<url>db/series/cogtech/364227662.html#MullerC12</url>
+</incollection>
+<incollection mdate="2013-09-10" key="series/cogtech/BenzmullerSS11">
+<author>Christoph Benzm&uuml;ller</author>
+<author>Marvin Schiller</author>
+<author>J&ouml;rg H. Siekmann</author>
+<title>Resource-Bounded Modelling and Analysis of Human-Level Interactive Proofs.</title>
+<pages>291-311</pages>
+<year>2011</year>
+<booktitle>Resource-Adaptive Cognitive Processes</booktitle>
+<ee>http://dx.doi.org/10.1007/978-3-540-89408-7_13</ee>
+<crossref>series/cogtech/354089408</crossref>
+<url>db/series/cogtech/354089408.html#BenzmullerSS11</url>
+</incollection>
+<incollection mdate="2013-09-10" key="series/cogtech/MarriottB04">
+<author>Andrew Marriott</author>
+<author>Simon Beard</author>
+<title>gUI: Specifying Complete User Interaction.</title>
+<pages>111-134</pages>
+<year>2004</year>
+<booktitle>Life-like characters</booktitle>
+<crossref>series/cogtech/354000867</crossref>
+<url>db/series/cogtech/354000867.html#MarriottB04</url>
+</incollection>
+<incollection mdate="2013-09-10" key="series/cogtech/RosisCCP04">
+<author>Fiorella de Rosis</author>
+<author>Berardina De Carolis</author>
+<author>Valeria Carofiglio</author>
+<author>Sebastiano Pizzutilo</author>
+<title>Shallowand Inner Forms of Emotional Intelligence in Advisory Dialog Simulation.</title>
+<pages>271-294</pages>
+<year>2004</year>
+<booktitle>Life-like characters</booktitle>
+<crossref>series/cogtech/354000867</crossref>
+<url>db/series/cogtech/354000867.html#RosisCCP04</url>
+</incollection>
+<incollection mdate="2013-09-10" key="series/cogtech/NeidigGH13">
+<author>J&ouml;rg Neidig</author>
+<author>Thomas Grosch</author>
+<author>Ulrike Heim</author>
+<title>The Smart SemProM.</title>
+<pages>73-89</pages>
+<year>2013</year>
+<booktitle>SemProM</booktitle>
+<ee>http://dx.doi.org/10.1007/978-3-642-37377-0_5</ee>
+<crossref>series/cogtech/364237376</crossref>
+<url>db/series/cogtech/364237376.html#NeidigGH13</url>
+</incollection>
+<incollection mdate="2013-09-10" key="series/cogtech/GoertzelP07">
+<author>Ben Goertzel</author>
+<author>Cassio Pennachin</author>
+<title>The Novamente Artificial Intelligence Engine.</title>
+<pages>63-129</pages>
+<year>2007</year>
+<booktitle>Artificial General Intelligence</booktitle>
+<ee>http://dx.doi.org/10.1007/978-3-540-68677-4_3</ee>
+<crossref>series/cogtech/354023733</crossref>
+<url>db/series/cogtech/354023733.html#GoertzelP07</url>
+</incollection>
+<incollection mdate="2013-09-10" key="series/cogtech/SchweitzerBDKMMMST06">
+<author>Antje Schweitzer</author>
+<author>Norbert Braunschweiler</author>
+<author>Grzegorz Dogil</author>
+<author>Tanja Klankert</author>
+<author>Bernd M&ouml;bius</author>
+<author>Gregor M&ouml;hler</author>
+<author>Edmilson Morais</author>
+<author>Bettina S&auml;uberlich</author>
+<author>Matthias Thomae</author>
+<title>Multimodal Speech Synthesis.</title>
+<pages>411-435</pages>
+<year>2006</year>
+<booktitle>SmartKom</booktitle>
+<ee>http://dx.doi.org/10.1007/3-540-36678-4_27</ee>
+<crossref>series/cogtech/54023732</crossref>
+<url>db/series/cogtech/54023732.html#SchweitzerBDKMMMST06</url>
+</incollection>
+<incollection mdate="2013-09-10" key="series/cogtech/KuckelhausMB13">
+<author>Markus K&uuml;ckelhaus</author>
+<author>Carsten Magerkurth</author>
+<author>J&ouml;rg Baus</author>
+<title>A SemProM Use Case: Tracking &amp; Tracing for Green Logistics and Integrity Control.</title>
+<pages>311-327</pages>
+<year>2013</year>
+<booktitle>SemProM</booktitle>
+<ee>http://dx.doi.org/10.1007/978-3-642-37377-0_19</ee>
+<crossref>series/cogtech/364237376</crossref>
+<url>db/series/cogtech/364237376.html#KuckelhausMB13</url>
+</incollection>
+<book mdate="2013-09-10" key="series/cogtech/54023732">
+<editor>Wolfgang Wahlster</editor>
+<title>SmartKom: Foundations of Multimodal Dialogue Systems</title>
+<year>2006</year>
+<publisher>Springer</publisher>
+<series href="db/series/cogtech/index.html">Cognitive Technologies</series>
+<ee>http://dx.doi.org/10.1007/3-540-36678-4</ee>
+<isbn>978-3-540-23732-7</isbn>
+<booktitle>SmartKom</booktitle>
+<url>db/series/cogtech/54023732.html</url>
+</book>
+
+<incollection mdate="2013-09-10" key="series/cogtech/SchmitzBNSS13">
+<author>Michael Schmitz</author>
+<author>Boris Brandherm</author>
+<author>J&ouml;rg Neidig</author>
+<author>Stefanie Schachtl</author>
+<author>Matthias Schuster</author>
+<title>Interaction Modalities for Digital Product Memories.</title>
+<pages>261-279</pages>
+<year>2013</year>
+<booktitle>SemProM</booktitle>
+<ee>http://dx.doi.org/10.1007/978-3-642-37377-0_16</ee>
+<crossref>series/cogtech/364237376</crossref>
+<url>db/series/cogtech/364237376.html#SchmitzBNSS13</url>
+</incollection>
+<incollection mdate="2013-09-10" key="series/cogtech/HayashiDCMSB11">
+<author>Yoshihiko Hayashi</author>
+<author>Thierry Declerck</author>
+<author>Nicoletta Calzolari</author>
+<author>Monica Monachini</author>
+<author>Claudia Soria</author>
+<author>Paul Buitelaar</author>
+<title>Language Service Ontology.</title>
+<pages>85-100</pages>
+<year>2011</year>
+<booktitle>The Language Grid</booktitle>
+<ee>http://dx.doi.org/10.1007/978-3-642-21178-2_6</ee>
+<crossref>series/cogtech/364221177</crossref>
+<url>db/series/cogtech/364221177.html#HayashiDCMSB11</url>
+</incollection>
+<incollection mdate="2013-09-10" key="series/cogtech/JamesonKMGWR11">
+<author>Anthony Jameson</author>
+<author>Juergen Kiefer</author>
+<author>Christian A. M&uuml;ller</author>
+<author>Barbara Gro&szlig;mann-Hutter</author>
+<author>Frank Wittig</author>
+<author>Ralf Rummer</author>
+<title>Assessment of a User's Time Pressure and Cognitive Load on the Basis of Features of Speech.</title>
+<pages>171-204</pages>
+<year>2011</year>
+<booktitle>Resource-Adaptive Cognitive Processes</booktitle>
+<ee>http://dx.doi.org/10.1007/978-3-540-89408-7_9</ee>
+<crossref>series/cogtech/354089408</crossref>
+<url>db/series/cogtech/354089408.html#JamesonKMGWR11</url>
+</incollection>
+<incollection mdate="2013-09-10" key="series/cogtech/LinK12">
+<author>Raz Lin</author>
+<author>Sarit Kraus</author>
+<title>From Research to Practice: Automated Negotiations with People.</title>
+<pages>195-212</pages>
+<year>2012</year>
+<booktitle>Ubiquitous Display Environments</booktitle>
+<ee>http://dx.doi.org/10.1007/978-3-642-27663-7_12</ee>
+<crossref>series/cogtech/364227662</crossref>
+<url>db/series/cogtech/364227662.html#LinK12</url>
+</incollection>
+<incollection mdate="2013-09-10" key="series/cogtech/Lin11">
+<author>Donghui Lin</author>
+<title>Humans in the Loop of Localization Processes.</title>
+<pages>201-213</pages>
+<year>2011</year>
+<booktitle>The Language Grid</booktitle>
+<ee>http://dx.doi.org/10.1007/978-3-642-21178-2_13</ee>
+<crossref>series/cogtech/364221177</crossref>
+<url>db/series/cogtech/364221177.html#Lin11</url>
+</incollection>
+<incollection mdate="2013-09-10" key="series/cogtech/GurevychP06">
+<author>Iryna Gurevych</author>
+<author>Robert Porzel</author>
+<title>Empirical Studies for Intuitive Interaction.</title>
+<pages>603-615</pages>
+<year>2006</year>
+<booktitle>SmartKom</booktitle>
+<ee>http://dx.doi.org/10.1007/3-540-36678-4_37</ee>
+<crossref>series/cogtech/54023732</crossref>
+<url>db/series/cogtech/54023732.html#GurevychP06</url>
+</incollection>
+<incollection mdate="2013-09-10" key="series/cogtech/AlexanderssonBP06">
+<author>Jan Alexandersson</author>
+<author>Tilman Becker</author>
+<author>Norbert Pfleger</author>
+<title>Overlay: The Basic Operation for Discourse Processing.</title>
+<pages>255-267</pages>
+<year>2006</year>
+<booktitle>SmartKom</booktitle>
+<ee>http://dx.doi.org/10.1007/3-540-36678-4_17</ee>
+<crossref>series/cogtech/54023732</crossref>
+<url>db/series/cogtech/54023732.html#AlexanderssonBP06</url>
+</incollection>
+<incollection mdate="2013-09-10" key="series/cogtech/MeixnerKK13">
+<author>Gerrit Meixner</author>
+<author>Alexander Kr&ouml;ner</author>
+<author>Gerrit Kahl</author>
+<title>A Summary of End-User Feedback on Digital Product Memories.</title>
+<pages>381-400</pages>
+<year>2013</year>
+<booktitle>SemProM</booktitle>
+<ee>http://dx.doi.org/10.1007/978-3-642-37377-0_23</ee>
+<crossref>series/cogtech/364237376</crossref>
+<url>db/series/cogtech/364237376.html#MeixnerKK13</url>
+</incollection>
+<incollection mdate="2013-09-10" key="series/cogtech/RothB08">
+<author>Peter M. Roth</author>
+<author>Horst Bischof</author>
+<title>Conservative Learning for Object Detectors.</title>
+<pages>139-158</pages>
+<year>2008</year>
+<booktitle>Machine Learning Techniques for Multimedia</booktitle>
+<ee>http://dx.doi.org/10.1007/978-3-540-75171-7_6</ee>
+<crossref>series/cogtech/354075170</crossref>
+<url>db/series/cogtech/354075170.html#RothB08</url>
+</incollection>
+<incollection mdate="2013-09-10" key="series/cogtech/CheverstTFF012">
+<author>Keith Cheverst</author>
+<author>Faisal Taher</author>
+<author>Matthew Fisher</author>
+<author>Daniel Fitton</author>
+<author>Nick Taylor 0002</author>
+<title>The Design, Deployment and Evaluation of Situated Display-Based Systems to Support Coordination and Community.</title>
+<pages>105-124</pages>
+<year>2012</year>
+<booktitle>Ubiquitous Display Environments</booktitle>
+<ee>http://dx.doi.org/10.1007/978-3-642-27663-7_7</ee>
+<crossref>series/cogtech/364227662</crossref>
+<url>db/series/cogtech/364227662.html#CheverstTFF012</url>
+</incollection>
+<incollection mdate="2013-09-10" key="series/cogtech/WeberCK11">
+<author>Andrea Weber</author>
+<author>Matthew W. Crocker</author>
+<author>Pia Knoeferle</author>
+<title>Conflicting Constraints in Resource-Adaptive Language Comprehension.</title>
+<pages>119-141</pages>
+<year>2011</year>
+<booktitle>Resource-Adaptive Cognitive Processes</booktitle>
+<ee>http://dx.doi.org/10.1007/978-3-540-89408-7_7</ee>
+<crossref>series/cogtech/354089408</crossref>
+<url>db/series/cogtech/354089408.html#WeberCK11</url>
+</incollection>
+<book mdate="2013-09-10" key="series/cogtech/354023733">
+<editor>Ben Goertzel</editor>
+<editor>Cassio Pennachin</editor>
+<title>Artificial General Intelligence</title>
+<year>2007</year>
+<publisher>Springer</publisher>
+<series href="db/series/cogtech/index.html">Cognitive Technologies</series>
+<ee>http://dx.doi.org/10.1007/978-3-540-68677-4</ee>
+<isbn>978-3-540-23733-4</isbn>
+<booktitle>Artificial General Intelligence</booktitle>
+<url>db/series/cogtech/354023733.html</url>
+</book>
+
+<incollection mdate="2013-09-10" key="series/cogtech/HornCNKHH13">
+<author>Sven Horn</author>
+<author>Alexander Claus</author>
+<author>J&ouml;rg Neidig</author>
+<author>Bruno Kiesel</author>
+<author>Thorbj&oslash;rn Hansen</author>
+<author>Jens Haupert</author>
+<title>The SemProM Data Format.</title>
+<pages>127-148</pages>
+<year>2013</year>
+<booktitle>SemProM</booktitle>
+<ee>http://dx.doi.org/10.1007/978-3-642-37377-0_8</ee>
+<crossref>series/cogtech/364237376</crossref>
+<url>db/series/cogtech/364237376.html#HornCNKHH13</url>
+</incollection>
+<book mdate="2013-12-03" key="series/cogtech/Gabbay13">
+<author>Dov M. Gabbay</author>
+<title>Reactive Kripke Semantics</title>
+<year>2013</year>
+<pages>1-430</pages>
+<publisher>Springer</publisher>
+<series href="db/series/cogtech/index.html">Cognitive Technologies</series>
+<isbn>978-3-642-41388-9</isbn>
+<ee>http://dx.doi.org/10.1007/978-3-642-41389-6</ee>
+<url>http://dx.doi.org/10.1007/978-3-642-41389-6</url>
+</book>
+<incollection mdate="2013-09-10" key="series/cogtech/SeisslerSSD13">
+<author>Marc Sei&szlig;ler</author>
+<author>Peter Stephan</author>
+<author>Jochen Schlick</author>
+<author>Ines Dahmann</author>
+<title>DPM Mapper: A Concept to Bridge the Gap Between XML-Based Digital Product Memories and Their Binary Representation.</title>
+<pages>149-161</pages>
+<year>2013</year>
+<booktitle>SemProM</booktitle>
+<ee>http://dx.doi.org/10.1007/978-3-642-37377-0_9</ee>
+<crossref>series/cogtech/364237376</crossref>
+<url>db/series/cogtech/364237376.html#SeisslerSSD13</url>
+</incollection>
+<incollection mdate="2013-09-10" key="series/cogtech/TanakaTS04">
+<author>Hozumi Tanaka</author>
+<author>Takenobu Tokunaga</author>
+<author>Yusuke Shinyama</author>
+<title>Animated Agents Capable of Understanding Natural Language and Performing Actions.</title>
+<pages>429-446</pages>
+<year>2004</year>
+<booktitle>Life-like characters</booktitle>
+<crossref>series/cogtech/354000867</crossref>
+<url>db/series/cogtech/354000867.html#TanakaTS04</url>
+</incollection>
+<incollection mdate="2013-09-10" key="series/cogtech/KronerHFSKS13">
+<author>Alexander Kr&ouml;ner</author>
+<author>Jens Haupert</author>
+<author>Jose de Gea Fernandez</author>
+<author>Rainer Steffen</author>
+<author>Christian Kleegrewe</author>
+<author>Martin Schneider</author>
+<title>Supporting Interaction with Digital Product Memories.</title>
+<pages>223-242</pages>
+<year>2013</year>
+<booktitle>SemProM</booktitle>
+<ee>http://dx.doi.org/10.1007/978-3-642-37377-0_14</ee>
+<crossref>series/cogtech/364237376</crossref>
+<url>db/series/cogtech/364237376.html#KronerHFSKS13</url>
+</incollection>
+<incollection mdate="2013-09-10" key="series/cogtech/HerzogR06">
+<author>Gerd Herzog</author>
+<author>Norbert Reithinger</author>
+<title>The SmartKom Architecture: A Framework for Multimodal Dialogue Systems.</title>
+<pages>55-70</pages>
+<year>2006</year>
+<booktitle>SmartKom</booktitle>
+<ee>http://dx.doi.org/10.1007/3-540-36678-4_4</ee>
+<crossref>series/cogtech/54023732</crossref>
+<url>db/series/cogtech/54023732.html#HerzogR06</url>
+</incollection>
+<incollection mdate="2013-09-10" key="series/cogtech/HerzogK13">
+<author>Gerd Herzog</author>
+<author>Alexander Kr&ouml;ner</author>
+<title>Towards an Integrated Framework for Semantic Product Memories.</title>
+<pages>39-55</pages>
+<year>2013</year>
+<booktitle>SemProM</booktitle>
+<ee>http://dx.doi.org/10.1007/978-3-642-37377-0_3</ee>
+<crossref>series/cogtech/364237376</crossref>
+<url>db/series/cogtech/364237376.html#HerzogK13</url>
+</incollection>
+<incollection mdate="2013-09-10" key="series/cogtech/PorteleGEKTV06">
+<author>Thomas Portele</author>
+<author>Silke Goronzy</author>
+<author>Martin C. Emele</author>
+<author>Andreas Kellner</author>
+<author>Sunna Torge</author>
+<author>J&uuml;rgen te Vrugt</author>
+<title>SmartKom-Home: The Interface to Home Entertainment.</title>
+<pages>493-503</pages>
+<year>2006</year>
+<booktitle>SmartKom</booktitle>
+<ee>http://dx.doi.org/10.1007/3-540-36678-4_31</ee>
+<crossref>series/cogtech/54023732</crossref>
+<url>db/series/cogtech/54023732.html#PorteleGEKTV06</url>
+</incollection>
+<incollection mdate="2013-09-10" key="series/cogtech/WilsonFB08">
+<author>Simon P. Wilson</author>
+<author>Julien Fauqueur</author>
+<author>Nozha Boujemaa</author>
+<title>Mental Search in Image Databases: Implicit Versus Explicit Content Query.</title>
+<pages>189-204</pages>
+<year>2008</year>
+<booktitle>Machine Learning Techniques for Multimedia</booktitle>
+<ee>http://dx.doi.org/10.1007/978-3-540-75171-7_8</ee>
+<crossref>series/cogtech/354075170</crossref>
+<url>db/series/cogtech/354075170.html#WilsonFB08</url>
+</incollection>
+<incollection mdate="2013-09-10" key="series/cogtech/SchreuerW12">
+<author>Naomi Schreuer</author>
+<author>Patrice L. (Tamar) Weiss</author>
+<title>Virtual Technologies and Empowerment of Users of Rehabilitation.</title>
+<pages>213-228</pages>
+<year>2012</year>
+<booktitle>Ubiquitous Display Environments</booktitle>
+<ee>http://dx.doi.org/10.1007/978-3-642-27663-7_13</ee>
+<crossref>series/cogtech/364227662</crossref>
+<url>db/series/cogtech/364227662.html#SchreuerW12</url>
+</incollection>
+<incollection mdate="2013-09-10" key="series/cogtech/WilsonDC08">
+<author>Simon P. Wilson</author>
+<author>Rozenn Dahyot</author>
+<author>P&aacute;draig Cunningham</author>
+<title>Introduction to Bayesian Methods and Decision Theory.</title>
+<pages>3-19</pages>
+</incollection>
+<dblp>
