@@ -43,5 +43,4 @@ public class Reuters {
             System.out.println(news.title);
         }
     }
-
 }
