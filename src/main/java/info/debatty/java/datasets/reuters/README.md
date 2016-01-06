@@ -1,4 +1,4 @@
-# Reuters dataset
+# Reuters-21578 dataset
 https://archive.ics.uci.edu/ml/datasets/Reuters-21578+Text+Categorization+Collection
 
 The documents in the Reuters-21578 collection appeared on the Reuters newswire in 1987. It contains a total of 21578 news.
