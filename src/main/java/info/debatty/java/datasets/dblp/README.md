@@ -11,12 +11,10 @@ The whole dblp dataset is available as one big XML file, which you can download 
 ```java
 import info.debatty.java.datasets.dblp.*;
 
-public class DBLP {
+public class MyApp {
 
     public static void main(String[] args) {
-        Dataset dblp_dataset = new Dataset(
-                DBLP.class.getClassLoader().getResource("mini-dblp.xml")
-                        .getFile());
+        Dataset dblp_dataset = new Dataset("/path/to/dblp/file.xml");
 
         for (Publication publication : dblp_dataset) {
             System.out.println(publication.type + " : " + publication.title);
