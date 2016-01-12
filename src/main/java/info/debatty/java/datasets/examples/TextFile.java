@@ -44,5 +44,4 @@ public class TextFile {
             System.out.println(line);
         }
     }
-    
 }

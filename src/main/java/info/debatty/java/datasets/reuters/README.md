@@ -10,12 +10,10 @@ The dataset consists of a folder containing multiple .sgm files, and can be down
 ```java
 import info.debatty.java.datasets.reuters.*;
 
-public class Reuters {
+public class MyClass {
 
     public static void main(String[] args) {
-        Dataset reuters_dataset = new Dataset(
-                DBLP.class.getClassLoader().getResource("mini-reuters")
-                .getFile());
+        Dataset reuters_dataset = new Dataset("/path/to/reuters/folder");
 
         for (News news : reuters_dataset) {
             System.out.println(news.title);

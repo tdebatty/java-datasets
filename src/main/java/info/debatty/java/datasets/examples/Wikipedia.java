@@ -46,5 +46,4 @@ public class Wikipedia {
             System.out.println(page.getText());
         }
     }
-    
 }
