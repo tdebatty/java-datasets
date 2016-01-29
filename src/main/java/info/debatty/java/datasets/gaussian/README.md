@@ -54,4 +54,4 @@ Will produce something like
 
 Which can be plotted with gnuplot:
 
-![gaussian mixture dataset generator](../examples/gaussiant-mixture.png)
+![gaussian mixture dataset generator](../examples/gaussian-mixture.png)
