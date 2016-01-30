@@ -61,9 +61,6 @@ public class GaussianMixture {
         for (int i = 0; i < 500; i++) {
             println(iterator.next());
         }
-
-
-
     }
 
     private static void println(Double[] array) {

@@ -52,7 +52,7 @@ public class Dataset extends info.debatty.java.datasets.Dataset<Double[]> {
 
     /**
      *
-     * @return
+     * @return an iterator of points (Double[])
      */
     public final Iterator<Double[]> iterator() {
         return new GaussianIterator(centers);

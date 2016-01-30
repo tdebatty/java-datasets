@@ -29,22 +29,17 @@ package info.debatty.java.datasets.gaussian;
  * @author Thibault Debatty
  */
 public class Center {
+
     private final int weight;
-
-    public int getWeight() {
-        return weight;
-    }
-
-    public double getCenter(int i) {
-        return center[i];
-    }
-
-    public double getDeviation(int i) {
-        return deviation[i];
-    }
     private final double[] center;
     private final double[] deviation;
 
+    /**
+     * Create a new center.
+     * @param weight the weight of this center
+     * @param center the center (must be d dimensions)
+     * @param deviation the deviation (must be d dimensions)
+     */
     public Center(
             final int weight, final double[] center, final double[] deviation) {
         this.weight = weight;
@@ -53,10 +48,36 @@ public class Center {
     }
 
     /**
-     *
-     * @return
+     * Get the weight of this center.
+     * @return the weight
      */
-    public int getDimension() {
+    public final int getWeight() {
+        return weight;
+    }
+
+    /**
+     * Get the value of center for dimension i.
+     * @param i dimension
+     * @return value of center for dimension i
+     */
+    public final double getCenter(final int i) {
+        return center[i];
+    }
+
+    /**
+     * Get the deviation of this center for dimension i.
+     * @param i dimension
+     * @return value of deviation for dimension i
+     */
+    public final double getDeviation(final int i) {
+        return deviation[i];
+    }
+
+    /**
+     * Return the dimensionality of this center.
+     * @return dimension
+     */
+    public final int getDimension() {
         return center.length;
     }
 
