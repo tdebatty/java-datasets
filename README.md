@@ -5,7 +5,7 @@ Java library for parsing various datasets:
 * [DBLP dataset](./src/main/java/info/debatty/java/datasets/dblp/)
 * [Reuters-21578 dataset](./src/main/java/info/debatty/java/datasets/reuters/)
 * [Text file dataset](./src/main/java/info/debatty/java/datasets/textfile/)
-* [ENRON email dataset](./src/main/java/info/debatty/java/datasets/enron/) (TODO)
+* [ENRON email dataset](./src/main/java/info/debatty/java/datasets/enron/)
 * [Wikipedia web pages](./src/main/java/info/debatty/java/datasets/wikipedia/)
 * [Synthetic gaussian mixture](./src/main/java/info/debatty/java/datasets/gaussian/)
 

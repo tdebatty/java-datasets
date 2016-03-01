@@ -26,7 +26,6 @@ package info.debatty.java.datasets.examples;
 
 import info.debatty.java.datasets.enron.Dataset;
 import info.debatty.java.datasets.enron.Email;
-import javax.mail.Address;
 
 
 /**
@@ -45,13 +44,19 @@ public class Enron {
 
         for (Email email : enron_dataset) {
             //System.out.println(email.getRaw());
-            System.out.println(email.getFrom());
+
             System.out.println(email.getUser());
+
+            // This might be "inbox", "sent", "archive/holidays" etc.
             System.out.println(email.getMailbox());
 
+            System.out.println(email.getSubject());
+            System.out.println(email.getFrom());
             for (String address : email.getTo()) {
                 System.out.println(address);
             }
+
+            System.out.println("---");
         }
     }
 }
