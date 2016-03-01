@@ -94,6 +94,10 @@ public class Email {
         return parser.getPlainContent();
     }
 
+    public String getSubject() throws Exception {
+        return parser.getSubject();
+    }
+
     public String getRaw() {
         return raw;
     }
