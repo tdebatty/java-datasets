@@ -86,6 +86,10 @@ public class Email {
         return addressToString(parser.getCc());
     }
 
+    public String getMessageId() throws MessagingException {
+        return parser.getMimeMessage().getMessageID();
+    }
+
     public List<String> getBcc() throws Exception {
         return addressToString(parser.getBcc());
     }

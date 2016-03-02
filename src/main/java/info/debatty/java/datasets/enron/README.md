@@ -42,33 +42,24 @@ Will display something like
 
 ```
 badeer-r
+<32086953.1075863603392.JavaMail.evans@thyme>
 memo_s
 Code of Ethics
 office.chairman@enron.com
 all.worldwide@enron.com
 ---
 badeer-r
+<12296501.1075863603653.JavaMail.evans@thyme>
 memo_s
 The New Power Company
 office.chairman@enron.com
 all.america@enron.com
 ---
 badeer-r
+<32156305.1075863603445.JavaMail.evans@thyme>
 memo_s
 2000 Chairman's Award
 enron.announcements@enron.com
 all.worldwide@enron.com
----
-badeer-r
-memo_s
-Organisational Announcement - Introducing Enron Global Markets
-office.chairman@enron.com
-all.worldwide@enron.com
----
-badeer-r
-memo_s
-ENA Meeting and Event Expenditure Approval Process
-enron.chairman@enron.com
-ena.employees@enron.com
 ---
 ```

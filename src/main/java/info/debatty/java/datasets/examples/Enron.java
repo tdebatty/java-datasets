@@ -47,6 +47,10 @@ public class Enron {
 
             System.out.println(email.getUser());
 
+            // Returns the unique id of the email
+            // e.g. <32086953.1075863603392.JavaMail.evans@thyme>
+            System.out.println(email.getMessageId());
+
             // This might be "inbox", "sent", "archive/holidays" etc.
             System.out.println(email.getMailbox());
 
