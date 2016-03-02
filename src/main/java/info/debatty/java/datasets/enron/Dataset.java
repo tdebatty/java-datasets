@@ -113,6 +113,9 @@ public class Dataset extends info.debatty.java.datasets.Dataset<Email> {
 
                 } catch (MessagingException ex) {
                     Logger.getLogger(Dataset.class.getName()).log(Level.SEVERE, null, ex);
+                    
+                } catch (Exception ex) {
+                    Logger.getLogger(Dataset.class.getName()).log(Level.SEVERE, null, ex);
                 }
 
                 if (available_files.isEmpty()) {

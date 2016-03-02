@@ -24,11 +24,13 @@
 
 package info.debatty.java.datasets.dblp;
 
+import java.io.Serializable;
+
 /**
  *
  * @author Thibault Debatty
  */
-public class Publication {
+public class Publication implements Serializable {
     public String title = "";
     public String type = "";
 }

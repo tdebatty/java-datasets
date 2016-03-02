@@ -24,21 +24,22 @@
 
 package info.debatty.java.datasets.wikipedia;
 
+import java.io.Serializable;
 import org.jsoup.Jsoup;
 
 /**
  *
  * @author Thibault Debatty
  */
-public class Page {
+public class Page implements Serializable {
     public String html = "";
 
     Page(String html) {
         this.html = html;
     }
-    
+
     public String getText() {
         return Jsoup.parse(html).text();
-        
+
     }
 }

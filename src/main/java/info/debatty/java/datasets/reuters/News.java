@@ -24,11 +24,13 @@
 
 package info.debatty.java.datasets.reuters;
 
+import java.io.Serializable;
+
 /**
  *
  * @author Thibault Debatty
  */
-public class News {
+public class News implements Serializable {
     public String title = "";
     public String date = "";
     public String body = "";

@@ -27,6 +27,7 @@ package info.debatty.java.datasets.enron;
 import java.io.ByteArrayInputStream;
 import java.io.File;
 import java.io.InputStream;
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Properties;
@@ -40,21 +41,39 @@ import org.apache.commons.mail.util.MimeMessageParser;
  *
  * @author Thibault Debatty
  */
-public class Email {
-    private String raw;
-    private final MimeMessageParser parser;
+public class Email implements Serializable {
+    private final String raw;
     private final String mailbox;
     private final String user;
+    private final String from;
+    private final List<String> to;
+    private final List<String> cc;
+    private final List<String> bcc;
+    private final String message_id;
+    private final String subject;
+    private final String content;
 
-    Email(final String raw, final String mailbox) throws MessagingException {
+
+    Email(final String raw, final String mailbox) throws MessagingException, Exception {
         this.raw = raw;
         String[] strings = mailbox.split(File.separator, 2);
         this.user = strings[0];
         this.mailbox = strings[1];
+
         Session s = Session.getDefaultInstance(new Properties());
         InputStream is = new ByteArrayInputStream(raw.getBytes());
         MimeMessage message = new MimeMessage(s, is);
-        parser = new MimeMessageParser(message);
+        MimeMessageParser parser = new MimeMessageParser(message);
+
+        from = parser.getFrom();
+        to = addressToString(parser.getTo());
+        cc = addressToString(parser.getCc());
+        bcc = addressToString(parser.getBcc());
+        subject = parser.getSubject();
+        content = parser.getPlainContent();
+        message_id = parser.getMimeMessage().getMessageID();
+
+
     }
 
     public String getUser() {
@@ -62,7 +81,7 @@ public class Email {
     }
 
     public String getFrom() throws Exception {
-        return parser.getFrom();
+        return from;
     }
 
     public String getMailbox() {
@@ -78,32 +97,47 @@ public class Email {
     }
 
     public List<String> getTo() throws Exception {
-        return addressToString(parser.getTo());
+        return to;
     }
 
 
-    public List<String> getCc() throws Exception {
-        return addressToString(parser.getCc());
+    public List<String> getCc() {
+        return cc;
     }
 
-    public String getMessageId() throws MessagingException {
-        return parser.getMimeMessage().getMessageID();
+    public String getMessageID() {
+        return message_id;
     }
 
-    public List<String> getBcc() throws Exception {
-        return addressToString(parser.getBcc());
+    public List<String> getBcc() {
+        return bcc;
     }
 
-    public String getPlainContent() {
-        return parser.getPlainContent();
+    public String getContent() {
+        return content;
     }
 
-    public String getSubject() throws Exception {
-        return parser.getSubject();
+    public String getSubject() {
+        return subject;
     }
 
     public String getRaw() {
         return raw;
+    }
+
+    @Override
+    public boolean  equals(Object other) {
+
+        Email other_email = (Email) other;
+        return other_email.message_id.equals(this.message_id);
+
+    }
+
+    @Override
+    public int hashCode() {
+        int hash = 5;
+        hash = 17 * hash + (this.message_id != null ? this.message_id.hashCode() : 0);
+        return hash;
     }
 
 }
