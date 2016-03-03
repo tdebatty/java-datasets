@@ -22,7 +22,7 @@
  * THE SOFTWARE.
  */
 
-package info.debatty.java.datasets.enron;
+package info.debatty.java.datasets.sift;
 
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
@@ -30,47 +30,34 @@ import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.io.Serializable;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 import junit.framework.TestCase;
 
 /**
  *
  * @author Thibault Debatty
  */
-public class EmailTest extends TestCase {
+public class SiftDescriptorTest extends TestCase {
 
-    public EmailTest(String testName) {
+    public SiftDescriptorTest(String testName) {
         super(testName);
     }
 
-    @Override
-    protected void setUp() throws Exception {
-        super.setUp();
-    }
-
-    @Override
-    protected void tearDown() throws Exception {
-        super.tearDown();
-    }
-
     /**
-     * Test of getRaw method, of class Email.
+     * Test of getFile method, of class SiftDescriptor.
      * @throws java.io.IOException
      * @throws java.lang.ClassNotFoundException
      */
     public void testSerializable() throws IOException, ClassNotFoundException {
         System.out.println("serializable");
-        Dataset enron_dataset = new Dataset(
-                EmailTest.class.getClassLoader().getResource("mini-enron")
-                .getFile());
+        Dataset sift_dataset = new Dataset(
+                SiftDescriptorTest.class.getClassLoader()
+                .getResource("mini-caltech101").getFile());
 
-        Email email = enron_dataset.iterator().next();
+        SiftDescriptor descriptor = sift_dataset.iterator().next();
+        byte[] pickle = pickle(descriptor);
+        SiftDescriptor copy = unpickle(pickle, SiftDescriptor.class);
 
-        byte[] pickle = pickle(email);
-        Email copy = unpickle(pickle, Email.class);
-
-        assertEquals(email, copy);
+        assertEquals(descriptor, copy);
     }
 
     private static <T extends Serializable> byte[] pickle(T obj)

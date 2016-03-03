@@ -8,6 +8,7 @@ Java library for parsing various datasets:
 * [ENRON email dataset](./src/main/java/info/debatty/java/datasets/enron/)
 * [Wikipedia web pages](./src/main/java/info/debatty/java/datasets/wikipedia/)
 * [Synthetic gaussian mixture](./src/main/java/info/debatty/java/datasets/gaussian/)
+* [Scale-invariant feature transform (SIFT) dataset](./src/main/java/info/debatty/java/datasets/sift/)
 
 These parsers are implemented using an iterator, which make them suitable for processing large datasets. You may also use it to process subparts of the dataset, as you can process items "on-the-fly", without reading the entire data.
 

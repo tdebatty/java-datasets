@@ -144,5 +144,15 @@
             <artifactId>commons-email</artifactId>
             <version>1.4</version>
         </dependency>
+        <dependency>
+            <groupId>gov.nih.imagej</groupId>
+            <artifactId>imagej</artifactId>
+            <version>1.47</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-math3</artifactId>
+            <version>3.6</version>
+        </dependency>
     </dependencies>
 </project>
