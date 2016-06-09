@@ -34,12 +34,22 @@ import java.util.Random;
  */
 public class Dataset extends info.debatty.java.datasets.Dataset<Double[]> {
     private final ArrayList<Center> centers;
+    private int size = -1;
 
     /**
      *
      */
     public Dataset() {
         this.centers = new ArrayList<Center>();
+    }
+
+    /**
+     * Create a dataset of a given size.
+     * @param size
+     */
+    public Dataset(final int size) {
+        this.centers = new ArrayList<Center>();
+        this.size = size;
     }
 
     /**
@@ -55,7 +65,7 @@ public class Dataset extends info.debatty.java.datasets.Dataset<Double[]> {
      * @return an iterator of points (Double[])
      */
     public final Iterator<Double[]> iterator() {
-        return new GaussianIterator(centers);
+        return new GaussianIterator(centers, size);
     }
 
     /**
@@ -66,8 +76,12 @@ public class Dataset extends info.debatty.java.datasets.Dataset<Double[]> {
         private final int dimension;
         private final Center[] lookup_table;
         private int total_weight;
+        private final int size;
+        private int count;
 
-        private GaussianIterator(final ArrayList<Center> centers) {
+        private GaussianIterator(
+                final ArrayList<Center> centers, final int size) {
+            this.size = size;
             dimension = centers.get(0).getDimension();
             rand = new Random();
             total_weight = 0;
@@ -86,10 +100,11 @@ public class Dataset extends info.debatty.java.datasets.Dataset<Double[]> {
         }
 
         public boolean hasNext() {
-            return true;
+            return (size != count);
         }
 
         public Double[] next() {
+            count++;
             Center center = lookup_table[rand.nextInt(total_weight)];
 
             Double[] point = new Double[dimension];

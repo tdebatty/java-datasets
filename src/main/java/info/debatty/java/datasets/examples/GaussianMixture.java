@@ -38,7 +38,7 @@ public class GaussianMixture {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        Dataset gaussian_mixture = new Dataset();
+        Dataset gaussian_mixture = new Dataset(500);
         gaussian_mixture.addCenter(
                 new Center(
                         2,
@@ -57,9 +57,8 @@ public class GaussianMixture {
                         new double[]{0.0, 4.0},
                         new double[]{2.0, 2.0}));
 
-        Iterator<Double[]> iterator = gaussian_mixture.iterator();
-        for (int i = 0; i < 500; i++) {
-            println(iterator.next());
+        for (Double[] vector : gaussian_mixture) {
+            println(vector);
         }
     }
 
