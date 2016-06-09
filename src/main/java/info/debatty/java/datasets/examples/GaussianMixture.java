@@ -26,7 +26,6 @@ package info.debatty.java.datasets.examples;
 
 import info.debatty.java.datasets.gaussian.Center;
 import info.debatty.java.datasets.gaussian.Dataset;
-import java.util.Iterator;
 
 /**
  *
@@ -62,7 +61,7 @@ public class GaussianMixture {
         }
     }
 
-    private static void println(Double[] array) {
+    public static void println(Double[] array) {
         for (Double value : array) {
             System.out.print("" + value + " ");
         }

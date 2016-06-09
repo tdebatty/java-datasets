@@ -68,55 +68,116 @@ public class Dataset extends info.debatty.java.datasets.Dataset<Double[]> {
         return new GaussianIterator(centers, size);
     }
 
-    /**
-     *
-     */
-    private static final class GaussianIterator implements Iterator<Double[]> {
-        private final Random rand;
-        private final int dimension;
-        private final Center[] lookup_table;
-        private int total_weight;
-        private final int size;
-        private int count;
 
-        private GaussianIterator(
-                final ArrayList<Center> centers, final int size) {
+    public static class Builder {
+        private final int dimensionality;
+        private final int num_centers;
+        private final Overlap overlap;
+
+        public enum Overlap {
+            NONE, LOW, MEDIUM, HIGH
+        }
+
+        private int size = -1;
+
+        /**
+         * Constructor with mandatory parameters.
+         * @param dimensionality
+         * @param num_centers
+         * @param overlap
+         */
+        public Builder(
+                final int dimensionality,
+                final int num_centers,
+                final Overlap overlap) {
+            this.dimensionality = dimensionality;
+            this.num_centers = num_centers;
+            this.overlap = overlap;
+        }
+
+        /**
+         * Set the size of the dataset to build.
+         * @param size
+         * @return
+         */
+        public final Builder setSize(final int size) {
             this.size = size;
-            dimension = centers.get(0).getDimension();
-            rand = new Random();
-            total_weight = 0;
-            for (Center center : centers) {
-                total_weight += center.getWeight();
-            }
-            lookup_table = new Center[total_weight];
-            int i = 0;
-            for (Center center : centers) {
-                for (int j = 0; j < center.getWeight(); j++) {
-                    lookup_table[i] = center;
-                    i++;
+            return this;
+        }
+
+        /**
+         * Build the dataset.
+         * @return
+         */
+        public final Dataset build() {
+            Dataset dataset = new Dataset(size);
+            Random rand = new Random();
+            for (int i = 0; i < num_centers; i++) {
+                double[] center = new double[dimensionality];
+                double[] deviation = new double[dimensionality];
+
+                for (int j = 0; j < dimensionality; j++) {
+                    center[j] = 10.0 * (rand.nextDouble() + i);
+                    deviation[j] = 1.0 + rand.nextDouble();
                 }
+                dataset.addCenter(new Center(1, center, deviation));
             }
 
+            return dataset;
         }
 
-        public boolean hasNext() {
-            return (size != count);
+
+    }
+}
+
+/**
+ * Iterator implementation for the Gaussian Mixture Dataset.
+ * @author Thibault Debatty
+ */
+final class GaussianIterator implements Iterator<Double[]> {
+    private final Random rand;
+    private final int dimension;
+    private final Center[] lookup_table;
+    private int total_weight;
+    private final int size;
+    private int count;
+
+    GaussianIterator(
+            final ArrayList<Center> centers, final int size) {
+        this.size = size;
+        dimension = centers.get(0).getDimension();
+        rand = new Random();
+        total_weight = 0;
+        for (Center center : centers) {
+            total_weight += center.getWeight();
         }
-
-        public Double[] next() {
-            count++;
-            Center center = lookup_table[rand.nextInt(total_weight)];
-
-            Double[] point = new Double[dimension];
-            for (int i = 0; i < dimension; i++) {
-                point[i] = center.getCenter(i)
-                        + rand.nextGaussian() * center.getDeviation(i);
+        lookup_table = new Center[total_weight];
+        int i = 0;
+        for (Center center : centers) {
+            for (int j = 0; j < center.getWeight(); j++) {
+                lookup_table[i] = center;
+                i++;
             }
-            return point;
         }
+    }
 
-        public void remove() {
-            throw new UnsupportedOperationException("Not supported!");
+    public boolean hasNext() {
+        return (size != count);
+    }
+
+    public Double[] next() {
+        count++;
+        Center center = lookup_table[rand.nextInt(total_weight)];
+
+        Double[] point = new Double[dimension];
+        for (int i = 0; i < dimension; i++) {
+            point[i] = center.getCenter(i)
+                    + rand.nextGaussian() * center.getDeviation(i);
         }
+        return point;
+    }
+
+    public void remove() {
+        throw new UnsupportedOperationException("Not supported!");
     }
 }
