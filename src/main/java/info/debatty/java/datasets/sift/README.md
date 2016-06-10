@@ -17,32 +17,41 @@ A lot of picture datasets can be downloaded on the Internet. The most used ones 
 
 ## Example
 ```java
-import info.debatty.java.datasets.enron.Dataset;
-import info.debatty.java.datasets.enron.Email;
+import info.debatty.java.datasets.sift.Dataset;
+import info.debatty.java.datasets.sift.SiftDescriptor;
+import info.debatty.java.datasets.sift.SimpleSiftSimilarity;
+import java.util.LinkedList;
+import java.util.Random;
 
-public class EnronExample {
+/**
+ *
+ * @author Thibault Debatty
+ */
+public class SIFT {
 
-    public static void main(String[] args) throws Exception {
-         Dataset enron_dataset = new Dataset(
-                DBLP.class.getClassLoader().getResource("mini-enron")
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        Dataset dataset = new Dataset(
+                SIFT.class.getClassLoader().getResource("mini-caltech101")
                 .getFile());
 
-        for (Email email : enron_dataset) {
-            // This would display the MIME text
-            //System.out.println(email.getRaw());
+        LinkedList<SiftDescriptor> images = new LinkedList<SiftDescriptor>();
+        for (SiftDescriptor descriptor : dataset) {
+            images.add(descriptor);
+        }
 
-            System.out.println(email.getUser());
+        Random rand = new Random();
+        SiftDescriptor query = images.remove(rand.nextInt(images.size()));
+        System.out.println("Query: " + query.getFile());
 
-            // This might be "inbox", "sent", "archive/holidays" etc.
-            System.out.println(email.getMailbox());
+        SimpleSiftSimilarity sift_similarity = new SimpleSiftSimilarity();
+        for (SiftDescriptor candidate : images) {
+            System.out.println(candidate.getFile());
 
-            System.out.println(email.getSubject());
-            System.out.println(email.getFrom());
-            for (String address : email.getTo()) {
-                System.out.println(address);
-            }
-
-            System.out.println("---");
+            System.out.printf("Similarity: %f\n",
+                            sift_similarity.similarity(query, candidate));
         }
     }
 }
@@ -51,25 +60,33 @@ public class EnronExample {
 Will display something like
 
 ```
-badeer-r
-<32086953.1075863603392.JavaMail.evans@thyme>
-memo_s
-Code of Ethics
-office.chairman@enron.com
-all.worldwide@enron.com
----
-badeer-r
-<12296501.1075863603653.JavaMail.evans@thyme>
-memo_s
-The New Power Company
-office.chairman@enron.com
-all.america@enron.com
----
-badeer-r
-<32156305.1075863603445.JavaMail.evans@thyme>
-memo_s
-2000 Chairman's Award
-enron.announcements@enron.com
-all.worldwide@enron.com
----
+Query: /path/to/mini-caltech101/image_0001.jpg
+/path/to/mini-caltech101/image_0003.jpg
+Similarity: 0.008701
+/path/to/mini-caltech101/image_0007.jpg
+Similarity: 0.006386
+/path/to/mini-caltech101/image_0013.jpg
+Similarity: 0.006460
+/path/to/mini-caltech101/image_0005.jpg
+Similarity: 0.011335
+/path/to/mini-caltech101/image_0010.jpg
+Similarity: 0.009647
+/path/to/mini-caltech101/image_0011.jpg
+Similarity: 0.005236
+/path/to/mini-caltech101/image_0009.jpg
+Similarity: 0.009802
+/path/to/mini-caltech101/image_0014.jpg
+Similarity: 0.007369
+/path/to/mini-caltech101/image_0015.jpg
+Similarity: 0.016110
+/path/to/mini-caltech101/image_0012.jpg
+Similarity: 0.004879
+/path/to/mini-caltech101/image_0002.jpg
+Similarity: 0.008584
+/path/to/mini-caltech101/image_0004.jpg
+Similarity: 0.007169
+/path/to/mini-caltech101/image_0008.jpg
+Similarity: 0.007908
+/path/to/mini-caltech101/image_0006.jpg
+Similarity: 0.007107
 ```
