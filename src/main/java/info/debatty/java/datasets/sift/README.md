@@ -5,10 +5,10 @@ The Scale Invariant Feature Transform (SIFT) is an algorithm that (as the name s
 
 https://en.wikipedia.org/wiki/Scale-invariant_feature_transform
 
-This dataset will provide you with a stream of stream descriptors from a directory containing pictures (one descriptor per picture).
+This dataset will provide you with a stream of descriptors from a directory containing pictures (one descriptor per picture).
 
 ## Download
-A lot of picture datasets can be downloaded on the Internet. The most used ones for reaseach are:
+A lot of picture datasets can be downloaded from the Internet. The most used ones for reaseach are:
 * [Caltech 101](http://www.vision.caltech.edu/Image_Datasets/Caltech101/) contains images from 101 categories
 * [Caltech 256](http://www.vision.caltech.edu/Image_Datasets/Caltech256/) contains 30607 images from 256 categories
 * [MICC-Flickr101](http://www.micc.unifi.it/vim/datasets/micc-flickr-101/) consists of Flick images
