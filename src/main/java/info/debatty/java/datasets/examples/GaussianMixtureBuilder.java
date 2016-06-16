@@ -26,8 +26,6 @@ package info.debatty.java.datasets.examples;
 
 import info.debatty.java.datasets.gaussian.Dataset;
 import java.awt.RenderingHints;
-import java.awt.geom.Ellipse2D;
-import java.awt.geom.Rectangle2D;
 import org.jfree.chart.ChartPanel;
 import org.jfree.chart.JFreeChart;
 import org.jfree.chart.axis.NumberAxis;
@@ -40,28 +38,37 @@ import org.jfree.ui.ApplicationFrame;
  */
 public class GaussianMixtureBuilder {
 
+    private static final int DIMENSIONALITY = 2;
+    private static final int CENTERS = 10;
+    private static final int SIZE = 10000;
+
+
     /**
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        Dataset dataset = new Dataset.Builder(2, 4, Dataset.Builder.Overlap.NONE)
-                .setSize(500).build();
+        Dataset dataset = new Dataset.Builder(DIMENSIONALITY, CENTERS)
+                .setOverlap(Dataset.Builder.Overlap.MEDIUM)
+                .varyDeviation(true)
+                .varyWeight(true)
+                .setSize(SIZE).build();
 
-        float[][] float_array = new float[500][];
+
+        float[][] float_array = new float[SIZE][];
         int i = 0;
         for (Double[] vector : dataset) {
-            GaussianMixture.println(vector);
+            //GaussianMixture.println(vector);
             float_array[i] = toFloatArray(vector);
             i++;
         }
 
-        final FastScatterPlotDemo demo = new FastScatterPlotDemo(
+        final FastScatterPlot2D demo = new FastScatterPlot2D(
                 "Gaussian Mixture Plot", transposeMatrix(float_array));
         demo.pack();
         demo.setVisible(true);
     }
 
-    private static float[] toFloatArray(Double[] arr) {
+    private static float[] toFloatArray(final Double[] arr) {
         if (arr == null) {
             return null;
         }
@@ -73,18 +80,23 @@ public class GaussianMixtureBuilder {
         return ret;
     }
 
-    public static float[][] transposeMatrix(float [][] m){
+    private static float[][] transposeMatrix(final float[][] m) {
         float[][] temp = new float[m[0].length][m.length];
-        for (int i = 0; i < m.length; i++)
-            for (int j = 0; j < m[0].length; j++)
+        for (int i = 0; i < m.length; i++) {
+            for (int j = 0; j < m[0].length; j++) {
                 temp[j][i] = m[i][j];
+            }
+        }
         return temp;
     }
 
 }
 
-
-class FastScatterPlotDemo extends ApplicationFrame {
+/**
+ * Draws a scatter plot using the first two dimensions in the data.
+ * @author Thibault Debatty
+ */
+class FastScatterPlot2D extends ApplicationFrame {
 
 
     /**
@@ -92,13 +104,13 @@ class FastScatterPlotDemo extends ApplicationFrame {
      *
      * @param title  the frame title.
      */
-    FastScatterPlotDemo(final String title, float[][] data) {
+    FastScatterPlot2D(final String title, final float[][] data) {
 
         super(title);
         final NumberAxis x_axis = new NumberAxis("X");
-        //x_axis.setAutoRangeIncludesZero(true);
+        x_axis.setAutoRangeIncludesZero(false);
         final NumberAxis y_axis = new NumberAxis("Y");
-        //y_axis.setAutoRangeIncludesZero(true);
+        y_axis.setAutoRangeIncludesZero(false);
 
         final FastScatterPlot plot = new FastScatterPlot(
                 data, x_axis, y_axis);
@@ -113,7 +125,6 @@ class FastScatterPlotDemo extends ApplicationFrame {
         panel.setPreferredSize(new java.awt.Dimension(1024, 768));
 
         setContentPane(panel);
-
     }
 
 }

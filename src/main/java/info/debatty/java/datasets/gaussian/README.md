@@ -1,9 +1,45 @@
 # Gaussian Mixture
 Generate a stream of vectors according to a predefined mixture of gaussians.
 
+The class also contains a builder that helps create a dataset using a few simple parameters (dimensionality, number of centers, overlap).
 
+## Example using the builder
 
-## Example
+```java
+import info.debatty.java.datasets.gaussian.Dataset;
+
+public class GaussianMixtureBuilder {
+
+    private static final int DIMENSIONALITY = 2;
+    private static final int CENTERS = 10;
+    private static final int SIZE = 10000;
+
+    public static void main(String[] args) {
+        Dataset dataset = new Dataset.Builder(DIMENSIONALITY, CENTERS)
+                .setOverlap(Dataset.Builder.Overlap.MEDIUM)
+                .varyDeviation(true)
+                .varyWeight(true)
+                .setSize(SIZE).build();
+
+        for (Double[] vector : dataset) {
+            // do something with your vector
+        }
+    }
+}
+```
+
+This dataset will produce something like on following plots.
+
+![gaussian mixture dataset builder](../examples/medium_overlap_01.png)
+
+![gaussian mixture dataset builder](../examples/medium_overlap_02.png)
+
+![gaussian mixture dataset builder](../examples/medium_overlap_03.png)
+
+## Example with manual data centers
+
+You can also manually define your centers.
+
 ```java
 import info.debatty.java.datasets.reuters.*;
 

@@ -65,6 +65,14 @@ public class Center {
     }
 
     /**
+     * Get the coordinates of the center.
+     * @return
+     */
+    public final double[] getCenter() {
+        return center;
+    }
+
+    /**
      * Get the deviation of this center for dimension i.
      * @param i dimension
      * @return value of deviation for dimension i
@@ -79,6 +87,14 @@ public class Center {
      */
     public final int getDimension() {
         return center.length;
+    }
+
+    /**
+     * Get the deviation for each dimension.
+     * @return
+     */
+    public final double[] getDeviation() {
+        return deviation;
     }
 
 }

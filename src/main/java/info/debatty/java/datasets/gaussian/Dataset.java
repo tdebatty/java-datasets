@@ -27,6 +27,7 @@ package info.debatty.java.datasets.gaussian;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.Random;
+import static org.apache.commons.math3.stat.StatUtils.max;
 
 /**
  *
@@ -69,30 +70,67 @@ public class Dataset extends info.debatty.java.datasets.Dataset<Double[]> {
     }
 
 
+    /**
+     * Builder that helps you create a random Gaussian Mixture dataset using
+     * only a few simple parameters (dimensionality, centers, overlap).
+     */
     public static class Builder {
         private final int dimensionality;
         private final int num_centers;
-        private final Overlap overlap;
+        private int size = -1;
+        private Overlap overlap = Overlap.NONE;
+        private boolean vary_weight = true;
+        private boolean vary_deviation = true;
 
+        /**
+         * Various possibilities for clusters overlap.
+         */
         public enum Overlap {
-            NONE, LOW, MEDIUM, HIGH
+            /**
+             * The clusters will not overlap.
+             */
+            NONE(6.0),
+
+            /**
+             * The clusters will slightly overlap, but graphical analysis allows
+             * to easily recognize the different clusters.
+             */
+            MEDIUM(2.5),
+
+            /**
+             * The clusters will have a large overlap, which makes it difficult
+             * to distinguish them.
+             */
+            HIGH(1.4);
+
+            private final double value;
+
+            Overlap(final double value) {
+                this.value = value;
+            }
         }
 
-        private int size = -1;
 
         /**
          * Constructor with mandatory parameters.
          * @param dimensionality
          * @param num_centers
-         * @param overlap
          */
         public Builder(
                 final int dimensionality,
-                final int num_centers,
-                final Overlap overlap) {
+                final int num_centers) {
             this.dimensionality = dimensionality;
             this.num_centers = num_centers;
+        }
+
+        /**
+         * Define the overlap between clusters (default is none).
+         * @param overlap
+         * @return
+         */
+        public final Builder setOverlap(final Overlap overlap) {
             this.overlap = overlap;
+            return this;
         }
 
         /**
@@ -106,27 +144,132 @@ public class Dataset extends info.debatty.java.datasets.Dataset<Double[]> {
         }
 
         /**
+         * Should the different clusters contain different number of points.
+         * Default: true
+         * @param vary_weight
+         * @return
+         */
+        public final Builder varyWeight(final boolean vary_weight) {
+            this.vary_weight = vary_weight;
+            return this;
+        }
+
+        /**
+         * Should the different clusters have different deviation.
+         * Default: true, the clusters will have different geographical extent.
+         * @param vary_deviation
+         * @return
+         */
+        public final Builder varyDeviation(final boolean vary_deviation) {
+            this.vary_deviation = vary_deviation;
+            return this;
+        }
+
+        private static final double DEVIATION_DEFAULT = 10.0;
+        private static final double DEVIATION_MULTIPLIER = 100.0;
+        private static final double DEFAULT_MAX = 1E6;
+        private static final double DISTANCE_CORRECTION_COEF = 1.6;
+
+        /**
          * Build the dataset.
          * @return
          */
         public final Dataset build() {
             Dataset dataset = new Dataset(size);
             Random rand = new Random();
+
+            double[] zero = new double[dimensionality];
+
             for (int i = 0; i < num_centers; i++) {
-                double[] center = new double[dimensionality];
+                int weight = 1;
+                if (vary_weight) {
+                    weight += rand.nextInt(10);
+                }
+
+                double[] random_center = new double[dimensionality];
                 double[] deviation = new double[dimensionality];
 
-                for (int j = 0; j < dimensionality; j++) {
-                    center[j] = 10.0 * (rand.nextDouble() + i);
-                    deviation[j] = 1.0 + rand.nextDouble();
+                do {
+                    for (int j = 0; j < dimensionality; j++) {
+                        if (i == 0) {
+                            random_center[j] = 0;
+                        } else {
+                            random_center[j] = (rand.nextDouble() - 0.5)
+                                    * DEFAULT_MAX;
+                        }
+
+                        deviation[j] = DEVIATION_DEFAULT;
+                        if (vary_deviation) {
+                            deviation[j] +=
+                                    rand.nextDouble() * DEVIATION_MULTIPLIER;
+                        }
+                    }
+                } while (distance(random_center, zero) > DEFAULT_MAX / 2);
+
+                if (i == 0) {
+                    dataset.addCenter(
+                            new Center(weight, random_center, deviation));
+                    continue;
                 }
-                dataset.addCenter(new Center(1, center, deviation));
+
+                Center nearest_center =
+                        findNearestCenter(dataset, random_center);
+
+                double[] target_distances = new double[dimensionality];
+                double[] ratios = new double[dimensionality];
+
+                for (int j = 0; j < dimensionality; j++) {
+                    target_distances[j] = (overlap.value + rand.nextDouble())
+                            * (deviation[j] + nearest_center.getDeviation(j))
+                            / DISTANCE_CORRECTION_COEF;
+                    ratios[j] = target_distances[j]
+                            / distance(
+                                    nearest_center.getCenter(),
+                                    random_center);
+                }
+
+                double ratio = max(ratios);
+
+                double[] new_center = new double[dimensionality];
+
+                // Project the point at correct distance
+                for (int j = 0; j < dimensionality; j++) {
+                    new_center[j] =
+                            nearest_center.getCenter(j)
+                            + ratio
+                            * (random_center[j] - nearest_center.getCenter(j));
+                }
+
+                dataset.addCenter(new Center(weight, new_center, deviation));
             }
 
             return dataset;
         }
 
+        private double distance(
+                final double[] center1, final  double[] center2) {
+            double agg = 0;
+            for (int i = 0; i < dimensionality; i++) {
+                agg += Math.pow(center1[i] - center2[i], 2);
+            }
 
+            return Math.sqrt(agg);
+        }
+
+        private Center findNearestCenter(
+                final Dataset dataset, final double[] new_center) {
+            Center nearest_center = null;
+            double nearest_distance = Double.MAX_VALUE;
+            for (Center center : dataset.centers) {
+                double distance = distance(new_center, center.getCenter());
+                if (distance < nearest_distance) {
+                    nearest_center = center;
+                    nearest_distance = distance;
+                }
+            }
+
+            return nearest_center;
+        }
     }
 }
 
