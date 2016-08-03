@@ -41,13 +41,13 @@ import javax.xml.stream.events.XMLEvent;
  * @author Thibault Debatty
  */
 public class Dataset extends info.debatty.java.datasets.Dataset<Publication> {
-    
+
     private final String file;
 
     public Dataset(String file) {
         this.file = file;
     }
-    
+
     public Iterator iterator() {
         return new DblpIterator(file);
     }
@@ -58,27 +58,27 @@ class DblpIterator implements Iterator<Publication> {
     private static final int BUFFER_SIZE = 20;
     private static final String[] publication_types = new String[] {
         "article", "inproceedings", "incollection"};
-    
+
     private static boolean in_publication_types(String localPart) {
         return in_array(publication_types, localPart);
     }
-    
+
     private static boolean in_array(String[] haystack, String needle) {
         for (String string : haystack) {
             if (string.equals(needle)) {
                 return true;
             }
         }
-        
+
         return false;
     }
-    
+
     XMLEventReader xmlEventReader;
     LinkedList<Publication> next_publications = new LinkedList<Publication>();
     private boolean in_publication = false;
 
     DblpIterator(String file) {
-        
+
         XMLInputFactory xmlInputFactory = XMLInputFactory.newInstance();
         try {
             xmlEventReader = xmlInputFactory.createXMLEventReader(new FileInputStream(file));
@@ -87,40 +87,44 @@ class DblpIterator implements Iterator<Publication> {
         } catch (XMLStreamException ex) {
             Logger.getLogger(DblpIterator.class.getName()).log(Level.SEVERE, null, ex);
         }
-        
+
         try {
             readNext();
         } catch (XMLStreamException ex) {
             Logger.getLogger(DblpIterator.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
-    
+
     private void readNext() throws XMLStreamException {
         Publication publication = new Publication();
         while(xmlEventReader.hasNext()) {
            XMLEvent xmlEvent = xmlEventReader.nextEvent();
            if (xmlEvent.isStartElement()){
                StartElement startElement = xmlEvent.asStartElement();
-               
+
                if(in_publication_types(startElement.getName().getLocalPart())){
                    publication = new Publication();
                    publication.type = startElement.getName().getLocalPart();
                    in_publication = true;
                    continue;
                }
-               
+
                if(in_publication && startElement.getName().getLocalPart().equals("title")){
                    xmlEvent = xmlEventReader.nextEvent();
                    publication.title = xmlEvent.toString();
                    continue;
                }
            }
-           
+
            if(xmlEvent.isEndElement()){
                if(in_publication_types(xmlEvent.asEndElement().getName().getLocalPart())){
-                   next_publications.add(publication);
+                   if (publication.title != null
+                           && !publication.title.equals("")) {
+                       next_publications.add(publication);
+                   }
+                   publication = new Publication();
                    in_publication = false;
-                   
+
                    if (next_publications.size() >= BUFFER_SIZE) {
                        break;
                    }
@@ -134,7 +138,7 @@ class DblpIterator implements Iterator<Publication> {
     }
 
     public Publication next() {
-        Publication pub = next_publications.pop();   
+        Publication pub = next_publications.pop();
         if (next_publications.isEmpty()) {
             try {
                 readNext();
@@ -146,6 +150,6 @@ class DblpIterator implements Iterator<Publication> {
     }
 
     public void remove() {
-        throw new UnsupportedOperationException("Not supported yet."); 
+        throw new UnsupportedOperationException("Not supported yet.");
     }
 }

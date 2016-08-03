@@ -33,4 +33,9 @@ import java.io.Serializable;
 public class Publication implements Serializable {
     public String title = "";
     public String type = "";
+
+    @Override
+    public String toString() {
+        return type + " : " + title;
+    }
 }
