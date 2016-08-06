@@ -204,7 +204,8 @@ public class Dataset extends info.debatty.java.datasets.Dataset<Double[]> {
                                     rand.nextDouble() * DEVIATION_MULTIPLIER;
                         }
                     }
-                } while (distance(random_center, zero) > DEFAULT_MAX / 2);
+                } while (distance(random_center, zero)
+                        > DEFAULT_MAX * Math.sqrt(dimensionality) / 2);
 
                 if (i == 0) {
                     dataset.addCenter(
