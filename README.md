@@ -110,11 +110,16 @@ public class GaussianMixtureExample {}
         // (including eventual random seeds),
         // which allows to reproduce the dataset using only a small amount of
         // memory
-        File file = File.createTempFile("testfile", "ser");
+        File file = File.createTempFile("testfile", ".ser");
         dataset.save(new FileOutputStream(file));
 
         // Read the dataset from memory
         Dataset d2 = (Dataset) Dataset.load(new FileInputStream(file));
+
+        // You can also save to complete data to disk if needed
+        // (e.g. for plotting with Gnuplot)
+        d2.saveCsv(new BufferedOutputStream(
+                new FileOutputStream(File.createTempFile("gaussian", ".dat"))));
 
         // Get all the data at once (can be very large!!)
         double[] data = d2.getAll();

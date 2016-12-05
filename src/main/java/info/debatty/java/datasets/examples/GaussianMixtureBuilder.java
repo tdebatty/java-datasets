@@ -26,6 +26,7 @@ package info.debatty.java.datasets.examples;
 
 import info.debatty.java.datasets.gaussian.Dataset;
 import java.awt.RenderingHints;
+import java.io.BufferedOutputStream;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
@@ -62,10 +63,15 @@ public class GaussianMixtureBuilder {
         // (including eventual random seeds),
         // which allows to reproduce the dataset using only a small amount of
         // memory
-        File file = File.createTempFile("testfile", "ser");
+        File file = File.createTempFile("testfile", ".ser");
         dataset.save(new FileOutputStream(file));
 
         Dataset d2 = (Dataset) Dataset.load(new FileInputStream(file));
+
+        // You can also save to complete data to disk if needed
+        // (e.g. for plotting with Gnuplot)
+        d2.saveCsv(new BufferedOutputStream(
+                new FileOutputStream(File.createTempFile("gaussian", ".dat"))));
 
         float[][] float_array = new float[SIZE][];
         int i = 0;

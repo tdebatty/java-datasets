@@ -81,11 +81,11 @@ public class Dataset extends info.debatty.java.datasets.Dataset<Publication> {
 
 class DblpIterator implements Iterator<Publication> {
     private static final int BUFFER_SIZE = 20;
-    private static final String[] publication_types = new String[] {
+    private static final String[] PUBLICATIONS_TYPES = new String[] {
         "article", "inproceedings", "incollection"};
 
     private static boolean in_publication_types(String localPart) {
-        return in_array(publication_types, localPart);
+        return in_array(PUBLICATIONS_TYPES, localPart);
     }
 
     private static boolean in_array(String[] haystack, String needle) {
@@ -174,6 +174,7 @@ class DblpIterator implements Iterator<Publication> {
         return pub;
     }
 
+    @Override
     public void remove() {
         throw new UnsupportedOperationException("Not supported yet.");
     }

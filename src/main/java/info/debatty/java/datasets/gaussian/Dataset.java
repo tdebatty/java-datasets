@@ -24,9 +24,8 @@
 
 package info.debatty.java.datasets.gaussian;
 
-import java.io.IOException;
-import java.io.ObjectOutputStream;
 import java.io.OutputStream;
+import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.LinkedList;
@@ -38,6 +37,8 @@ import static org.apache.commons.math3.stat.StatUtils.max;
  * @author Thibault Debatty
  */
 public class Dataset extends info.debatty.java.datasets.Dataset<double[]> {
+    public static final String DEFAULT_DELIMITER = ";\t";
+
     private final ArrayList<Center> centers;
     private int size = -1;
     private final long random_seed;
@@ -58,6 +59,18 @@ public class Dataset extends info.debatty.java.datasets.Dataset<double[]> {
     public Dataset(final int size) {
         this();
         this.size = size;
+    }
+
+    public void saveCsv(OutputStream stream) {
+        saveCsv(stream, DEFAULT_DELIMITER);
+    }
+
+    public void saveCsv(OutputStream stream, String delimiter) {
+        PrintWriter writer = new PrintWriter(stream);
+        for (double[] item : this) {
+            writer.println(arrToString(item, delimiter));
+        }
+
     }
 
     /**
@@ -119,7 +132,13 @@ public class Dataset extends info.debatty.java.datasets.Dataset<double[]> {
         return true;
     }
 
-
+    private static String arrToString(double[] item, String delimiter) {
+        String r = "";
+        for (int i = 0; i < item.length; i++) {
+            r += item[i] + delimiter;
+        }
+        return r;
+    }
 
     /**
      * Builder that helps you create a random Gaussian Mixture dataset using
