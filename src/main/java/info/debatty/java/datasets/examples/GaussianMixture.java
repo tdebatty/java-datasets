@@ -56,13 +56,13 @@ public class GaussianMixture {
                         new double[]{0.0, 4.0},
                         new double[]{2.0, 2.0}));
 
-        for (Double[] vector : gaussian_mixture) {
+        for (double[] vector : gaussian_mixture) {
             println(vector);
         }
     }
 
-    public static void println(Double[] array) {
-        for (Double value : array) {
+    public static void println(double[] array) {
+        for (double value : array) {
             System.out.print("" + value + " ");
         }
         System.out.print("\n");

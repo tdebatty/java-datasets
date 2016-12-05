@@ -24,8 +24,12 @@
 
 package info.debatty.java.datasets.gaussian;
 
+import java.io.IOException;
+import java.io.ObjectOutputStream;
+import java.io.OutputStream;
 import java.util.ArrayList;
 import java.util.Iterator;
+import java.util.LinkedList;
 import java.util.Random;
 import static org.apache.commons.math3.stat.StatUtils.max;
 
@@ -33,15 +37,18 @@ import static org.apache.commons.math3.stat.StatUtils.max;
  *
  * @author Thibault Debatty
  */
-public class Dataset extends info.debatty.java.datasets.Dataset<Double[]> {
+public class Dataset extends info.debatty.java.datasets.Dataset<double[]> {
     private final ArrayList<Center> centers;
     private int size = -1;
+    private final long random_seed;
 
     /**
      *
      */
     public Dataset() {
         this.centers = new ArrayList<Center>();
+        Random rand = new Random();
+        this.random_seed = rand.nextLong();
     }
 
     /**
@@ -49,7 +56,7 @@ public class Dataset extends info.debatty.java.datasets.Dataset<Double[]> {
      * @param size
      */
     public Dataset(final int size) {
-        this.centers = new ArrayList<Center>();
+        this();
         this.size = size;
     }
 
@@ -65,9 +72,53 @@ public class Dataset extends info.debatty.java.datasets.Dataset<Double[]> {
      *
      * @return an iterator of points (Double[])
      */
-    public final Iterator<Double[]> iterator() {
-        return new GaussianIterator(centers, size);
+    public final Iterator<double[]> iterator() {
+        return new GaussianIterator(centers, size, random_seed);
     }
+
+    @Override
+    public LinkedList<double[]> getAll() {
+        if (this.size < 0) {
+            throw new IllegalArgumentException("Cannot return all items of an"
+                    + "infinite dataset! Set a dataset size!");
+        }
+
+        return super.getAll();
+    }
+
+    @Override
+    public int hashCode() {
+        int hash = 3;
+        hash = 97 * hash + (this.centers != null ? this.centers.hashCode() : 0);
+        hash = 97 * hash + this.size;
+        hash = 97 * hash + (int) (this.random_seed ^ (this.random_seed >>> 32));
+        return hash;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) {
+            return true;
+        }
+        if (obj == null) {
+            return false;
+        }
+        if (getClass() != obj.getClass()) {
+            return false;
+        }
+        final Dataset other = (Dataset) obj;
+        if (this.size != other.size) {
+            return false;
+        }
+        if (this.random_seed != other.random_seed) {
+            return false;
+        }
+        if (this.centers != other.centers && (this.centers == null || !this.centers.equals(other.centers))) {
+            return false;
+        }
+        return true;
+    }
+
 
 
     /**
@@ -278,7 +329,7 @@ public class Dataset extends info.debatty.java.datasets.Dataset<Double[]> {
  * Iterator implementation for the Gaussian Mixture Dataset.
  * @author Thibault Debatty
  */
-final class GaussianIterator implements Iterator<Double[]> {
+final class GaussianIterator implements Iterator<double[]> {
     private final Random rand;
     private final int dimension;
     private final Center[] lookup_table;
@@ -287,11 +338,15 @@ final class GaussianIterator implements Iterator<Double[]> {
     private int count;
 
     GaussianIterator(
-            final ArrayList<Center> centers, final int size) {
+            final ArrayList<Center> centers,
+            final int size,
+            final long random_seed) {
+
         this.size = size;
         dimension = centers.get(0).getDimension();
-        rand = new Random();
+        rand = new Random(random_seed);
         total_weight = 0;
+
         for (Center center : centers) {
             total_weight += center.getWeight();
         }
@@ -309,11 +364,11 @@ final class GaussianIterator implements Iterator<Double[]> {
         return (size != count);
     }
 
-    public Double[] next() {
+    public double[] next() {
         count++;
         Center center = lookup_table[rand.nextInt(total_weight)];
 
-        Double[] point = new Double[dimension];
+        double[] point = new double[dimension];
         for (int i = 0; i < dimension; i++) {
             point[i] = center.getCenter(i)
                     + rand.nextGaussian() * center.getDeviation(i);
@@ -321,6 +376,7 @@ final class GaussianIterator implements Iterator<Double[]> {
         return point;
     }
 
+    @Override
     public void remove() {
         throw new UnsupportedOperationException("Not supported!");
     }

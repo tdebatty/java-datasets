@@ -39,19 +39,45 @@ import java.util.logging.Logger;
 public class Dataset extends info.debatty.java.datasets.Dataset<String> {
     private final String file;
 
-    public Dataset(String file_) {
-        file = file_;
+    public Dataset(String file) {
+        this.file = file;
     }
+
+    @Override
+    public int hashCode() {
+        int hash = 3;
+        hash = 71 * hash + (this.file != null ? this.file.hashCode() : 0);
+        return hash;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) {
+            return true;
+        }
+        if (obj == null) {
+            return false;
+        }
+        if (getClass() != obj.getClass()) {
+            return false;
+        }
+        final Dataset other = (Dataset) obj;
+        if ((this.file == null) ? (other.file != null) : !this.file.equals(other.file)) {
+            return false;
+        }
+        return true;
+    }
+
     public Iterator<String> iterator() {
         return new DatasetIterator(file);
-    }   
+    }
 }
 
 class DatasetIterator implements Iterator<String> {
 
     private BufferedReader bufferedReader;
     private String next_line;
-    
+
     DatasetIterator(String file) {
         try {
             bufferedReader = new BufferedReader(new FileReader(file));
@@ -72,7 +98,7 @@ class DatasetIterator implements Iterator<String> {
             }
             return false;
         }
-        
+
         return true;
     }
 
@@ -89,5 +115,5 @@ class DatasetIterator implements Iterator<String> {
     public void remove() {
         throw new UnsupportedOperationException("Not supported!");
     }
-    
+
 }

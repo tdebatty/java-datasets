@@ -39,11 +39,36 @@ import java.util.logging.Logger;
  */
 public class Dataset extends info.debatty.java.datasets.Dataset<Page> {
 
-    private String directory;
+    private final String directory;
 
     public Dataset(String directory) {
         this.directory = directory;
 
+    }
+
+    @Override
+    public int hashCode() {
+        int hash = 5;
+        hash = 97 * hash + (this.directory != null ? this.directory.hashCode() : 0);
+        return hash;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) {
+            return true;
+        }
+        if (obj == null) {
+            return false;
+        }
+        if (getClass() != obj.getClass()) {
+            return false;
+        }
+        final Dataset other = (Dataset) obj;
+        if ((this.directory == null) ? (other.directory != null) : !this.directory.equals(other.directory)) {
+            return false;
+        }
+        return true;
     }
 
     public Iterator<Page> iterator() {
@@ -65,10 +90,10 @@ public class Dataset extends info.debatty.java.datasets.Dataset<Page> {
 
         public WikipediaIterator(String directory) {
             directories.push(new File(directory));
-            
+
             // Fill the files buffer
             readNextFiles();
-            
+
             // Fill the pages buffer
             readNextPages();
         }
@@ -91,19 +116,19 @@ public class Dataset extends info.debatty.java.datasets.Dataset<Page> {
         }
 
         private void readNextPages() {
-            
+
             while(available_pages.size() < BUFFER_SIZE) {
                 if (available_files.isEmpty()) {
                     return;
                 }
-                
+
                 File next_file = available_files.poll();
                 try {
                     available_pages.add(new Page(readFile(next_file.getPath())));
                 } catch (IOException ex) {
                     Logger.getLogger(Dataset.class.getName()).log(Level.SEVERE, null, ex);
                 }
-                
+
                 if (available_files.isEmpty()) {
                     readNextFiles();
                 }
@@ -129,7 +154,7 @@ public class Dataset extends info.debatty.java.datasets.Dataset<Page> {
         }
 
         private void readNextFiles() {
-            
+
             while (available_files.isEmpty()) {
                 if (directories.empty()) {
                     return;

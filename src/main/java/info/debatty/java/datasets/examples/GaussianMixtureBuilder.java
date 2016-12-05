@@ -26,6 +26,10 @@ package info.debatty.java.datasets.examples;
 
 import info.debatty.java.datasets.gaussian.Dataset;
 import java.awt.RenderingHints;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+import java.io.IOException;
 import org.jfree.chart.ChartPanel;
 import org.jfree.chart.JFreeChart;
 import org.jfree.chart.axis.NumberAxis;
@@ -46,17 +50,26 @@ public class GaussianMixtureBuilder {
     /**
      * @param args the command line arguments
      */
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException, ClassNotFoundException {
         Dataset dataset = new Dataset.Builder(DIMENSIONALITY, CENTERS)
                 .setOverlap(Dataset.Builder.Overlap.MEDIUM)
                 .varyDeviation(true)
                 .varyWeight(true)
                 .setSize(SIZE).build();
 
+        // You can serialize and save your Dataset.
+        // This will not save all the points, but only the Dataset oject
+        // (including eventual random seeds),
+        // which allows to reproduce the dataset using only a small amount of
+        // memory
+        File file = File.createTempFile("testfile", "ser");
+        dataset.save(new FileOutputStream(file));
+
+        Dataset d2 = (Dataset) Dataset.load(new FileInputStream(file));
 
         float[][] float_array = new float[SIZE][];
         int i = 0;
-        for (Double[] vector : dataset) {
+        for (double[] vector : d2) {
             //GaussianMixture.println(vector);
             float_array[i] = toFloatArray(vector);
             i++;
@@ -68,14 +81,14 @@ public class GaussianMixtureBuilder {
         demo.setVisible(true);
     }
 
-    private static float[] toFloatArray(final Double[] arr) {
+    private static float[] toFloatArray(final double[] arr) {
         if (arr == null) {
             return null;
         }
         int n = arr.length;
         float[] ret = new float[n];
         for (int i = 0; i < n; i++) {
-            ret[i] = arr[i].floatValue();
+            ret[i] = (float) arr[i];
         }
         return ret;
     }

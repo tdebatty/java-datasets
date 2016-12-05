@@ -51,6 +51,31 @@ public class Dataset extends info.debatty.java.datasets.Dataset<Publication> {
     public Iterator iterator() {
         return new DblpIterator(file);
     }
+
+    @Override
+    public int hashCode() {
+        int hash = 7;
+        hash = 29 * hash + (this.file != null ? this.file.hashCode() : 0);
+        return hash;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) {
+            return true;
+        }
+        if (obj == null) {
+            return false;
+        }
+        if (getClass() != obj.getClass()) {
+            return false;
+        }
+        final Dataset other = (Dataset) obj;
+        if ((this.file == null) ? (other.file != null) : !this.file.equals(other.file)) {
+            return false;
+        }
+        return true;
+    }
 }
 
 

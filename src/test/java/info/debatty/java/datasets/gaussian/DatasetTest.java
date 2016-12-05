@@ -24,6 +24,10 @@
 
 package info.debatty.java.datasets.gaussian;
 
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+import java.io.IOException;
 import junit.framework.TestCase;
 
 /**
@@ -44,9 +48,21 @@ public class DatasetTest extends TestCase {
                 .setSize(SIZE)
                 .build();
 
-        for (Double[] point : dataset) {
+        for (double[] point : dataset) {
             System.out.print(".");
         }
+    }
+
+    public void testSaveLoad() throws IOException, ClassNotFoundException {
+        Dataset dataset = new Dataset.Builder(DIMENSIONALITY, CENTERS)
+                .setSize(SIZE)
+                .build();
+
+        File file = File.createTempFile("testfile", "ser");
+        dataset.save(new FileOutputStream(file));
+
+        Dataset d2 = (Dataset) Dataset.load(new FileInputStream(file));
+        assertEquals(dataset, d2);
     }
 
 

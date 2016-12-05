@@ -40,7 +40,7 @@ import javax.mail.MessagingException;
  */
 public class Dataset extends info.debatty.java.datasets.Dataset<Email> {
 
-    private String directory;
+    private final String directory;
 
     public Dataset(String directory) {
         this.directory = directory;
@@ -50,6 +50,33 @@ public class Dataset extends info.debatty.java.datasets.Dataset<Email> {
     public Iterator<Email> iterator() {
         return new EnronIterator(directory);
     }
+
+    @Override
+    public int hashCode() {
+        int hash = 3;
+        hash = 89 * hash + (this.directory != null ? this.directory.hashCode() : 0);
+        return hash;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) {
+            return true;
+        }
+        if (obj == null) {
+            return false;
+        }
+        if (getClass() != obj.getClass()) {
+            return false;
+        }
+        final Dataset other = (Dataset) obj;
+        if ((this.directory == null) ? (other.directory != null) : !this.directory.equals(other.directory)) {
+            return false;
+        }
+        return true;
+    }
+
+    
 
     private static class EnronIterator implements Iterator<Email> {
 
@@ -113,7 +140,7 @@ public class Dataset extends info.debatty.java.datasets.Dataset<Email> {
 
                 } catch (MessagingException ex) {
                     Logger.getLogger(Dataset.class.getName()).log(Level.SEVERE, null, ex);
-                    
+
                 } catch (Exception ex) {
                     Logger.getLogger(Dataset.class.getName()).log(Level.SEVERE, null, ex);
                 }

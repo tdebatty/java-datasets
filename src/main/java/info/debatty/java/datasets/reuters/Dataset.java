@@ -48,8 +48,34 @@ public class Dataset extends info.debatty.java.datasets.Dataset<News>{
 
     public Dataset(String reutersDir) {
         this.directory = reutersDir;
-
     }
+
+    @Override
+    public int hashCode() {
+        int hash = 5;
+        hash = 89 * hash + (this.directory != null ? this.directory.hashCode() : 0);
+        return hash;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) {
+            return true;
+        }
+        if (obj == null) {
+            return false;
+        }
+        if (getClass() != obj.getClass()) {
+            return false;
+        }
+        final Dataset other = (Dataset) obj;
+        if ((this.directory == null) ? (other.directory != null) : !this.directory.equals(other.directory)) {
+            return false;
+        }
+        return true;
+    }
+
+    
 
     static Pattern EXTRACTION_PATTERN = Pattern.compile(
             "<DATE>(.*?)</DATE>.*?<TITLE>(.*?)</TITLE>.*?<BODY>(.*?)</BODY>");
@@ -81,7 +107,7 @@ public class Dataset extends info.debatty.java.datasets.Dataset<News>{
         BufferedReader file_reader;
 
         public ReutersIterator(String dir_name) {
-            
+
             File directory = new File(dir_name);
             files.addAll(Arrays.asList(directory.listFiles(new FileFilter() {
                 @Override

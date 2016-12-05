@@ -24,11 +24,14 @@
 
 package info.debatty.java.datasets.gaussian;
 
+import java.io.Serializable;
+import java.util.Arrays;
+
 /**
  *
  * @author Thibault Debatty
  */
-public class Center {
+public class Center implements Serializable {
 
     private final int weight;
     private final double[] center;
@@ -96,5 +99,40 @@ public class Center {
     public final double[] getDeviation() {
         return deviation;
     }
+
+    @Override
+    public int hashCode() {
+        int hash = 3;
+        hash = 73 * hash + this.weight;
+        hash = 73 * hash + Arrays.hashCode(this.center);
+        hash = 73 * hash + Arrays.hashCode(this.deviation);
+        return hash;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) {
+            return true;
+        }
+        if (obj == null) {
+            return false;
+        }
+        if (getClass() != obj.getClass()) {
+            return false;
+        }
+        final Center other = (Center) obj;
+        if (this.weight != other.weight) {
+            return false;
+        }
+        if (!Arrays.equals(this.center, other.center)) {
+            return false;
+        }
+        if (!Arrays.equals(this.deviation, other.deviation)) {
+            return false;
+        }
+        return true;
+    }
+
+    
 
 }
