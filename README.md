@@ -52,7 +52,7 @@ public class MyClass {
 One of the datasets allow to easily produce random data according to a gaussian mixture:
 
 
-![gaussian mixture dataset builder](./blob/master/src/main/java/info/debatty/java/datasets/examples/medium_overlap_01.png)
+![gaussian mixture dataset builder](https://raw.githubusercontent.com/tdebatty/java-datasets/master/src/main/java/info/debatty/java/datasets/examples/medium_overlap_01.png)
 
 ```java
 
