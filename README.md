@@ -27,7 +27,7 @@ Or check the [GitHub releases](https://github.com/tdebatty/java-datasets/release
 ## Quickstart
 
 Usually, you simply have to:
-- Initialize the Dataset object, using the path to the folder or directory containing the data
+- Initialize the Dataset object, using the path to the file or directory containing the data
 - Iterate over the dataset items as long as you want...
 
 ```java
@@ -39,7 +39,7 @@ public class MyClass {
         // We will use reuters news dataset
         Dataset reuters_dataset = new Dataset("/path/to/reuters/folder");
 
-		// Iterate over news
+	// Iterate over news
         for (News news : reuters_dataset) {
             System.out.println(news.title);
         }
@@ -51,30 +51,10 @@ public class MyClass {
 
 One of the datasets allow to easily produce random data according to a gaussian mixture:
 
+
+![gaussian mixture dataset builder](./blob/master/src/main/java/info/debatty/java/datasets/examples/medium_overlap_01.png)
+
 ```java
-/*
- * The MIT License
- *
- * Copyright 2016 Thibault Debatty.
- *
- * Permission is hereby granted, free of charge, to any person obtaining a copy
- * of this software and associated documentation files (the "Software"), to deal
- * in the Software without restriction, including without limitation the rights
- * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
- * copies of the Software, and to permit persons to whom the Software is
- * furnished to do so, subject to the following conditions:
- *
- * The above copyright notice and this permission notice shall be included in
- * all copies or substantial portions of the Software.
- *
- * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
- * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
- * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
- * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
- * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
- * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
- * THE SOFTWARE.
- */
 
 package info.debatty.java.datasets.examples;
 
@@ -84,13 +64,8 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
-import org.jfree.chart.ChartPanel;
-import org.jfree.chart.JFreeChart;
-import org.jfree.chart.axis.NumberAxis;
-import org.jfree.chart.plot.FastScatterPlot;
-import org.jfree.ui.ApplicationFrame;
 
-public class GaussianMixtureExample {}
+public class GaussianMixtureExample {
 
     private static final int DIMENSIONALITY = 2;
     private static final int CENTERS = 10;
@@ -124,7 +99,6 @@ public class GaussianMixtureExample {}
         // Get all the data at once (can be very large!!)
         double[] data = d2.getAll();
     }
-
 }
 ```
 
