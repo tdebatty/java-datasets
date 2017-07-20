@@ -111,6 +111,12 @@ public class Dataset
             return null;
         }
 
+        /**
+         * Not supported.
+         */
+        @Override
+        public void remove() {
+            throw new UnsupportedOperationException();
+        }
     }
-
 }
