@@ -28,6 +28,7 @@ import static info.debatty.java.datasets.fish.Image.WIDTH;
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
+import java.io.Serializable;
 import java.util.Arrays;
 import javax.imageio.ImageIO;
 
@@ -36,7 +37,7 @@ import javax.imageio.ImageIO;
  *
  * @author tibo
  */
-public class Layer {
+public class Layer implements Serializable {
 
     private final int[] buffer;
 

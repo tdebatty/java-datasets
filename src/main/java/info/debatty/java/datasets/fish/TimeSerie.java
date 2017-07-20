@@ -23,13 +23,14 @@
  */
 package info.debatty.java.datasets.fish;
 
+import java.io.Serializable;
 import java.util.Arrays;
 
 /**
  *
  * @author tibo
  */
-public class TimeSerie {
+public class TimeSerie implements Serializable {
     public final int x;
     public final int y;
     public double[] values;

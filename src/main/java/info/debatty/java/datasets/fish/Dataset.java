@@ -68,7 +68,7 @@ public class Dataset
      * {@inheritDoc}
      * @return
      */
-    public Iterator<Image> iterator() {
+    public final Iterator<Image> iterator() {
         return new FishIterator();
     }
 
@@ -80,13 +80,8 @@ public class Dataset
         private final LinkedList<File> fishes = new LinkedList<File>();
 
         FishIterator() {
-            File fish_folder;
-            try {
-                fish_folder =
-                        new File(getClass().getResource("/fish/").toURI());
-            } catch (URISyntaxException ex) {
-                return;
-            }
+            File fish_folder = new File(
+                    getClass().getResource("/fish").getFile());
 
             // Sort !!
             for (File file : fish_folder.listFiles()) {

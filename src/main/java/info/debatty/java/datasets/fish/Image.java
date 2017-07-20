@@ -24,6 +24,7 @@
 package info.debatty.java.datasets.fish;
 
 import java.io.IOException;
+import java.io.Serializable;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.util.LinkedList;
@@ -32,7 +33,7 @@ import java.util.LinkedList;
  *
  * @author tibo
  */
-public class Image {
+public class Image implements Serializable {
 
     static final int HEIGHT = 87;
     static final int WIDTH = 76;

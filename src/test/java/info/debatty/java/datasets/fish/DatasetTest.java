@@ -51,8 +51,6 @@ public class DatasetTest extends TestCase {
                 "Time serie is not of expected length",
                 240,
                 time_series.get(0).values.length);
-
-        System.out.println(time_series.get(0));
     }
 
     /**
