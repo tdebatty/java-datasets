@@ -126,7 +126,8 @@ public class Dataset extends info.debatty.java.datasets.Dataset<double[]> {
         if (this.random_seed != other.random_seed) {
             return false;
         }
-        if (this.centers != other.centers && (this.centers == null || !this.centers.equals(other.centers))) {
+        if (this.centers != other.centers
+                && (this.centers == null || !this.centers.equals(other.centers))) {
             return false;
         }
         return true;
