@@ -23,6 +23,7 @@
  */
 package info.debatty.java.datasets.fish;
 
+import java.io.Serializable;
 import java.util.LinkedList;
 import java.util.List;
 
@@ -31,7 +32,7 @@ import java.util.List;
  *
  * @author tibo
  */
-public class DTWSimilarity {
+public class DTWSimilarity implements Serializable {
 
     /**
      *
