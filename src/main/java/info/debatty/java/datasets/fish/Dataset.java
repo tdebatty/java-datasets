@@ -25,7 +25,6 @@ package info.debatty.java.datasets.fish;
 
 import java.io.File;
 import java.io.IOException;
-import java.net.URISyntaxException;
 import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.List;
