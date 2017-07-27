@@ -31,6 +31,8 @@ import java.util.Arrays;
  * @author tibo
  */
 public class TimeSerie implements Serializable {
+    public static final long serialVersionUID = 20170724104800L;
+
     public final int x;
     public final int y;
     public double[] values;
