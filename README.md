@@ -1,5 +1,5 @@
 # java-datasets
-[![Maven Central](https://maven-badges.herokuapp.com/maven-central/info.debatty/java-datasets/badge.svg)](https://maven-badges.herokuapp.com/maven-central/info.debatty/java-datasets) [![Build Status](https://travis-ci.org/tdebatty/java-datasets.svg?branch=master)](https://travis-ci.org/tdebatty/java-datasets) [![API Documentation](http://api123.web-d.be/api123-head.svg)](http://api123.web-d.be/api/java-datasets/head/index.html)
+[![Maven Central](https://maven-badges.herokuapp.com/maven-central/info.debatty/java-datasets/badge.svg)](https://maven-badges.herokuapp.com/maven-central/info.debatty/java-datasets) [![Build Status](https://travis-ci.org/tdebatty/java-datasets.svg?branch=master)](https://travis-ci.org/tdebatty/java-datasets) [![Javadocs](http://www.javadoc.io/badge/info.debatty/java-datasets.svg)](http://www.javadoc.io/doc/info.debatty/java-datasets)
 
 Java library for parsing various datasets:
 * [DBLP dataset](./src/main/java/info/debatty/java/datasets/dblp/)
@@ -102,4 +102,4 @@ public class GaussianMixtureExample {
 }
 ```
 
-For the other datasets, check [the examples](./src/main/java/info/debatty/java/datasets/examples), or [the documentation](http://api123.web-d.be/api/java-datasets/head/index.html).
+For the other datasets, check [the examples](./src/main/java/info/debatty/java/datasets/examples), or [the documentation](http://www.javadoc.io/doc/info.debatty/java-datasets).
